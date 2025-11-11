@@ -6,10 +6,10 @@ compatibility_date = "2023-10-30"
 [[d1_databases]]
 binding = "SEO_DB"
 database_name = "seo-db"
-database_id = "" # You will need to fill this in after creating the database
+database_id = "00000000-0000-0000-0000-000000000000" # Dummy ID for local development
 
 # Bind a KV Namespace. This is where you can store key-value data.
 [[kv_namespaces]]
 binding = "CACHE_KV"
-id = "" # You will need to fill this in after creating the KV namespace
-preview_id = ""
+id = "00000000000000000000000000000000" # Dummy ID for local development
+preview_id = "00000000000000000000000000000000" # Dummy ID for local development
