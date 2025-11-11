@@ -1,8 +1,14 @@
+import { jsx } from 'hono/jsx';
 import { Hono } from 'hono';
 import { HTTPException } from 'hono/http-exception';
+import { serveStatic } from 'hono/cloudflare-workers';
 import { Language, getLangDetails, t, languages } from './utils/i18n';
+import { Layout } from './templates/layout';
 
 const app = new Hono();
+
+// Static file serving
+app.use('/static/*', serveStatic({ root: './src' }));
 
 const SUPPORTED_LANGS = Object.keys(languages);
 
@@ -23,8 +29,16 @@ app.use('/:lang/*', async (c, next) => {
 // Route for language-specific homepages
 app.get('/:lang', (c) => {
   const lang = c.req.param('lang') as Language;
-  const greeting = t(lang, 'greeting');
-  return c.text(greeting);
+  const title = t(lang, 'homepageTitle');
+
+  return c.html(
+    <Layout lang={lang} title={title}>
+      <div class="hero">
+        <h1>{t(lang, 'greeting')}</h1>
+        <p>This is the homepage content.</p>
+      </div>
+    </Layout>
+  );
 });
 
 export default app;
