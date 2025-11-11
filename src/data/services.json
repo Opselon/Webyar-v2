@@ -1,0 +1,76 @@
+{
+  "services": [
+    {
+      "id": "technical-seo",
+      "icon": "icon-technical",
+      "translations": {
+        "fa": {
+          "title": "سئوی تکنیکال",
+          "description": "بهینه‌سازی زیرساخت وب‌سایت شما برای حداکثر کارایی و قابلیت ایندکس شدن.",
+          "details": [
+            "آنالیز ساختار سایت",
+            "بهبود سرعت و Core Web Vitals",
+            "پیاده‌سازی Schema Markup",
+            "آنالیز لاگ‌ها"
+          ]
+        },
+        "en": {
+          "title": "Technical SEO",
+          "description": "Optimizing your website's infrastructure for maximum performance and indexability.",
+          "details": [
+            "Site Structure Analysis",
+            "Speed & Core Web Vitals Improvement",
+            "Schema Markup Implementation",
+            "Log Analysis"
+          ]
+        },
+        "ar": {
+          "title": "سيو تقني",
+          "description": "تحسين البنية التحتية لموقعك لتحقيق أقصى أداء وقابلية للفهرسة.",
+          "details": [
+            "تحليل بنية الموقع",
+            "تحسين السرعة ومؤشرات الويب الأساسية",
+            "تنفيذ ترميز Schema",
+            "تحليل السجلات"
+          ]
+        }
+      }
+    },
+    {
+      "id": "on-page-seo",
+      "icon": "icon-onpage",
+      "translations": {
+        "fa": {
+          "title": "سئوی داخلی (On-Page)",
+          "description": "بهینه‌سازی محتوا و عناصر صفحات برای رتبه‌گیری بهتر در کلمات کلیدی هدف.",
+          "details": [
+            "تحقیق کلمات کلیدی",
+            "بهینه‌سازی تگ‌های متا",
+            "ساختاردهی محتوا (H1/H2)",
+            "لینک‌سازی داخلی"
+          ]
+        },
+        "en": {
+          "title": "On-Page SEO",
+          "description": "Optimizing page content and elements to rank higher for target keywords.",
+          "details": [
+            "Keyword Research",
+            "Meta Tag Optimization",
+            "Content Structuring (H1/H2)",
+            "Internal Linking"
+          ]
+        },
+        "ar": {
+          "title": "سيو على الصفحة",
+          "description": "تحسين محتوى الصفحة وعناصرها للحصول على ترتيب أعلى للكلمات الرئيسية المستهدفة.",
+          "details": [
+            "بحث الكلمات الرئيسية",
+            "تحسين العلامات الوصفية",
+            "هيكلة المحتوى (H1 / H2)",
+            "الربط الداخلي"
+          ]
+        }
+      }
+    }
+  ]
+}

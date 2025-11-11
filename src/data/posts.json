@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "slug": "understanding-core-web-vitals",
+      "author": "Jane Doe",
+      "date": "2023-10-26",
+      "readTime": 8,
+      "category": "technical",
+      "translations": {
+        "fa": {
+          "title": "درک Core Web Vitals",
+          "excerpt": "راهنمای جامع برای درک و بهینه‌سازی Core Web Vitals برای بهبود تجربه کاربری و رتبه سئو.",
+          "content": "<h1>درک Core Web Vitals</h1><p>این محتوای کامل پست وبلاگ است...</p>"
+        },
+        "en": {
+          "title": "Understanding Core Web Vitals",
+          "excerpt": "A comprehensive guide to understanding and optimizing Core Web Vitals for better user experience and SEO rankings.",
+          "content": "<h1>Understanding Core Web Vitals</h1><p>This is the full content of the blog post...</p>"
+        },
+        "ar": {
+          "title": "فهم مؤشرات الويب الأساسية",
+          "excerpt": "دليل شامل لفهم وتحسين مؤشرات الويب الأساسية لتحسين تجربة المستخدم وتصنيفات السيو.",
+          "content": "<h1>فهم مؤشرات الويب الأساسية</h1><p>هذا هو المحتوى الكامل لمنشور المدونة ...</p>"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "slug": "international-seo-strategy",
+      "author": "John Smith",
+      "date": "2023-11-05",
+      "readTime": 12,
+      "category": "strategy",
+      "translations": {
+        "fa": {
+          "title": "استراتژی سئوی بین‌المللی",
+          "excerpt": "چگونه وب‌سایت خود را برای مخاطبان جهانی بهینه کنیم و در چندین زبان رتبه بگیریم.",
+          "content": "<h1>استراتژی سئوی بین‌المللی</h1><p>این محتوای کامل پست وبلاگ است...</p>"
+        },
+        "en": {
+          "title": "International SEO Strategy",
+          "excerpt": "How to optimize your website for a global audience and rank in multiple languages.",
+          "content": "<h1>International SEO Strategy</h1><p>This is the full content of the blog post...</p>"
+        },
+        "ar": {
+          "title": "استراتيجية السيو الدولية",
+          "excerpt": "كيفية تحسين موقع الويب الخاص بك لجمهور عالمي والحصول على ترتيب في لغات متعددة.",
+          "content": "<h1>استراتيجية السيو الدولية</h1><p>هذا هو المحتوى الكامل لمنشور المدونة ...</p>"
+        }
+      }
+    }
+  ]
+}

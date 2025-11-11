@@ -2,15 +2,20 @@ import { jsx } from 'hono/jsx';
 import { Hono } from 'hono';
 import { HTTPException } from 'hono/http-exception';
 import { serveStatic } from 'hono/cloudflare-workers';
-import { Language, getLangDetails, t, languages } from './utils/i18n';
-import { Layout } from './templates/layout';
+import { Language, getLangDetails, languages } from './utils/i18n';
+import { HomePage } from './templates/pages/Home';
+import { ServicesPage } from './templates/pages/Services';
+import { PricingPage } from './templates/pages/Pricing';
+import { BlogIndexPage } from './templates/pages/BlogIndex';
+import { BlogPostPage } from './templates/pages/BlogPost';
+import { CaseStudiesPage } from './templates/pages/CaseStudies';
+import { CaseStudyDetailPage } from './templates/pages/CaseStudyDetail';
+import { ContactPage } from './templates/pages/Contact';
 
 const app = new Hono();
 
 // Static file serving
 app.use('/static/*', serveStatic({ root: './src' }));
-
-const SUPPORTED_LANGS = Object.keys(languages);
 
 // Middleware to handle root redirection
 app.get('/', (c) => {
@@ -26,19 +31,47 @@ app.use('/:lang/*', async (c, next) => {
   await next();
 });
 
-// Route for language-specific homepages
+// Page Routes
 app.get('/:lang', (c) => {
   const lang = c.req.param('lang') as Language;
-  const title = t(lang, 'homepageTitle');
+  return c.html(<HomePage lang={lang} />);
+});
 
-  return c.html(
-    <Layout lang={lang} title={title}>
-      <div class="hero">
-        <h1>{t(lang, 'greeting')}</h1>
-        <p>This is the homepage content.</p>
-      </div>
-    </Layout>
-  );
+app.get('/:lang/services', (c) => {
+  const lang = c.req.param('lang') as Language;
+  return c.html(<ServicesPage lang={lang} />);
+});
+
+app.get('/:lang/pricing', (c) => {
+  const lang = c.req.param('lang') as Language;
+  return c.html(<PricingPage lang={lang} />);
+});
+
+app.get('/:lang/blog', (c) => {
+  const lang = c.req.param('lang') as Language;
+  return c.html(<BlogIndexPage lang={lang} />);
+});
+
+app.get('/:lang/blog/:slug', (c) => {
+  const lang = c.req.param('lang') as Language;
+  const slug = c.req.param('slug');
+  return c.html(<BlogPostPage lang={lang} slug={slug} />);
+});
+
+app.get('/:lang/case-studies', (c) => {
+    const lang = c.req.param('lang') as Language;
+    return c.html(<CaseStudiesPage lang={lang} />);
+});
+
+app.get('/:lang/case-studies/:slug', (c) => {
+    const lang = c.req.param('lang') as Language;
+    const slug = c.req.param('slug');
+    return c.html(<CaseStudyDetailPage lang={lang} slug={slug} />);
+});
+
+app.get('/:lang/contact', (c) => {
+  const lang = c.req.param('lang') as Language;
+  return c.html(<ContactPage lang={lang} />);
 });
 
 export default app;
