@@ -1,0 +1,2 @@
+-- This is a placeholder for the D1 database schema.
+-- We will define the schema for our tables in a later stage.
