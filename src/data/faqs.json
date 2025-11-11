@@ -1,0 +1,40 @@
+{
+  "faqs": [
+    {
+      "id": 1,
+      "category": "general",
+      "translations": {
+        "fa": {
+          "question": "چه زمانی نتایج سئو را مشاهده خواهم کرد؟",
+          "answer": "سئو یک فرآیند بلندمدت است. نتایج اولیه معمولاً طی ۳ تا ۶ ماه قابل مشاهده هستند، اما نتایج پایدار و قابل توجه به زمان بیشتری نیاز دارد."
+        },
+        "en": {
+          "question": "When will I see SEO results?",
+          "answer": "SEO is a long-term process. Initial results are typically visible within 3 to 6 months, but sustainable and significant results require more time."
+        },
+        "ar": {
+          "question": "متى سأرى نتائج السيو؟",
+          "answer": "السيو عملية طويلة الأمد. عادة ما تكون النتائج الأولية مرئية في غضون 3 إلى 6 أشهر ، لكن النتائج المستدامة والمهمة تتطلب مزيدًا من الوقت."
+        }
+      }
+    },
+    {
+      "id": 2,
+      "category": "technical",
+      "translations": {
+        "fa": {
+          "question": "آیا سئوی تکنیکال برای وب‌سایت من ضروری است؟",
+          "answer": "بله، سئوی تکنیکال پایه‌ای است که تمام تلاش‌های دیگر سئو بر روی آن بنا می‌شود. بدون یک زیرساخت قوی، دستیابی به رتبه‌های بالا دشوار است."
+        },
+        "en": {
+          "question": "Is technical SEO necessary for my website?",
+          "answer": "Yes, technical SEO is the foundation upon which all other SEO efforts are built. Without a strong infrastructure, it is difficult to achieve high rankings."
+        },
+        "ar": {
+          "question": "هل السيو التقني ضروري لموقعي؟",
+          "answer": "نعم ، السيو التقني هو الأساس الذي تُبنى عليه جميع جهود السيو الأخرى. بدون بنية تحتية قوية ، من الصعب تحقيق تصنيفات عالية."
+        }
+      }
+    }
+  ]
+}

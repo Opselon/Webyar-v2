@@ -1,0 +1,43 @@
+{
+  "caseStudies": [
+    {
+      "id": 1,
+      "slug": "saas-company-growth",
+      "client": "SaaS Company",
+      "industry": "SaaS",
+      "duration": 9,
+      "translations": {
+        "fa": {
+          "title": "رشد ۱۲۰٪ ترافیک ارگانیک برای یک شرکت SaaS",
+          "problem": "مشتری با وجود محصول عالی، در جذب ترافیک ارگانیک و دیده شدن در کلمات کلیدی اصلی صنعت خود با مشکل مواجه بود.",
+          "solution": "ما یک استراتژی جامع سئوی تکنیکال و محتوایی را پیاده‌سازی کردیم که بر بهینه‌سازی Core Web Vitals و ایجاد محتوای تخصصی متمرکز بود.",
+          "results": [
+            { "metric": "ترافیک ارگانیک", "value": "+120%" },
+            { "metric": "لیدهای ورودی", "value": "+60%" },
+            { "metric": "رتبه در کلمات کلیدی اصلی", "value": "صفحه اول گوگل" }
+          ]
+        },
+        "en": {
+          "title": "120% Organic Traffic Growth for a SaaS Company",
+          "problem": "Despite having a great product, the client struggled to attract organic traffic and gain visibility for key industry keywords.",
+          "solution": "We implemented a comprehensive technical and content SEO strategy, focusing on Core Web Vitals optimization and creating expert-level content.",
+          "results": [
+            { "metric": "Organic Traffic", "value": "+120%" },
+            { "metric": "Inbound Leads", "value": "+60%" },
+            { "metric": "Ranking for Core Keywords", "value": "First Page of Google" }
+          ]
+        },
+        "ar": {
+          "title": "نمو بنسبة 120٪ في حركة المرور العضوية لشركة SaaS",
+          "problem": "على الرغم من وجود منتج رائع ، كافح العميل لجذب حركة المرور العضوية واكتساب رؤية للكلمات الرئيسية الرئيسية في الصناعة.",
+          "solution": "لقد قمنا بتنفيذ استراتيجية شاملة للسيو التقني والمحتوى ، مع التركيز على تحسين مؤشرات الويب الأساسية وإنشاء محتوى على مستوى الخبراء.",
+          "results": [
+            { "metric": "حركة المرور العضوية", "value": "+ 120٪" },
+            { "metric": "العملاء المحتملون الوافدون", "value": "+ 60٪" },
+            { "metric": "الترتيب للكلمات الرئيسية الأساسية", "value": "الصفحة الأولى من Google" }
+          ]
+        }
+      }
+    }
+  ]
+}

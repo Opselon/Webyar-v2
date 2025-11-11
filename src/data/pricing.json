@@ -1,0 +1,78 @@
+{
+  "packages": [
+    {
+      "id": "kickstart-seo",
+      "type": "short-term",
+      "duration": 3,
+      "translations": {
+        "fa": {
+          "title": "Kickstart SEO",
+          "description": "بهینه‌سازی تکنیکال اولیه و پیاده‌سازی سریع برای نتایج فوری.",
+          "features": [
+            "آنالیز جامع وب‌سایت",
+            "تحقیق کلمات کلیدی اولیه",
+            "بهینه‌سازی ۵ صفحه اصلی",
+            "گزارش پیشرفت ماهانه"
+          ]
+        },
+        "en": {
+          "title": "Kickstart SEO",
+          "description": "Initial technical optimization and quick-win implementation for immediate results.",
+          "features": [
+            "Comprehensive Website Audit",
+            "Initial Keyword Research",
+            "Optimization of 5 Core Pages",
+            "Monthly Progress Report"
+          ]
+        },
+        "ar": {
+          "title": "بدء التشغيل السريع للسيو",
+          "description": "التحسين الفني الأولي والتنفيذ السريع لتحقيق نتائج فورية.",
+          "features": [
+            "تدقيق شامل للموقع",
+            "بحث أولي للكلمات الرئيسية",
+            "تحسين 5 صفحات أساسية",
+            "تقرير شهري عن التقدم"
+          ]
+        }
+      }
+    },
+    {
+      "id": "growth-retainer",
+      "type": "long-term",
+      "duration": 6,
+      "translations": {
+        "fa": {
+          "title": "Growth Retainer",
+          "description": "استراتژی ماهانه و بهینه‌سازی مداوم برای رشد پایدار.",
+          "features": [
+            "تمام موارد پکیج Kickstart",
+            "استراتژی و تولید محتوا",
+            "لینک‌سازی پایه‌ای",
+            "داشبورد تحلیلی اختصاصی"
+          ]
+        },
+        "en": {
+          "title": "Growth Retainer",
+          "description": "Monthly strategy and continuous optimization for sustainable growth.",
+          "features": [
+            "All features from Kickstart package",
+            "Content Strategy & Creation",
+            "Foundational Link Building",
+            "Dedicated Analytics Dashboard"
+          ]
+        },
+        "ar": {
+          "title": "عقد النمو",
+          "description": "استراتيجية شهرية وتحسين مستمر لتحقيق نمو مستدام.",
+          "features": [
+            "جميع ميزات باقة بدء التشغيل السريع",
+            "استراتيجية وإنشاء المحتوى",
+            "بناء الروابط الأساسية",
+            "لوحة تحكم تحليلية مخصصة"
+          ]
+        }
+      }
+    }
+  ]
+}
