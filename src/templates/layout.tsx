@@ -28,7 +28,7 @@ export const Layout: FC<PropsWithChildren<LayoutProps>> = ({ lang, title, childr
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title}</title>
-        <link href="/static/style.css" rel="stylesheet" />
+        <link href="/style.css" rel="stylesheet" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>

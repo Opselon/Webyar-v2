@@ -1,7 +1,6 @@
 import { jsx } from 'hono/jsx';
 import { Hono } from 'hono';
 import { HTTPException } from 'hono/http-exception';
-import { serveStatic } from 'hono/cloudflare-workers';
 import { Language, getLangDetails, languages } from './utils/i18n';
 import { HomePage } from './templates/pages/Home';
 import { ServicesPage } from './templates/pages/Services';
@@ -13,9 +12,6 @@ import { CaseStudyDetailPage } from './templates/pages/CaseStudyDetail';
 import { ContactPage } from './templates/pages/Contact';
 
 const app = new Hono();
-
-// Static file serving
-app.use('/static/*', serveStatic({ root: './src' }));
 
 // Middleware to handle root redirection
 app.get('/', (c) => {
