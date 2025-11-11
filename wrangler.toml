@@ -15,4 +15,4 @@ id = "00000000000000000000000000000000" # Dummy ID for local development
 preview_id = "00000000000000000000000000000000" # Dummy ID for local development
 
 [site]
-bucket = "./src/static"
+bucket = "./src"

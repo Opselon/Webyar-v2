@@ -1,5 +1,5 @@
 import { jsx } from 'hono/jsx';
-import { FC, PropsWithChildren } from 'hono/jsx';
+import { FC } from 'hono/jsx';
 import { Language, LanguageDetails, t, languages } from '../utils/i18n';
 
 interface LayoutProps {
@@ -20,8 +20,8 @@ const themeScript = `
   }
 `;
 
-export const Layout: FC<PropsWithChildren<LayoutProps>> = ({ lang, title, children }) => {
-  const langDetails = languages[lang];
+export const Layout: FC<LayoutProps> = ({ lang, title, children }) => {
+  const langDetails = languages[lang as Language];
 
   return (
     <html lang={langDetails.code} dir={langDetails.dir}>
