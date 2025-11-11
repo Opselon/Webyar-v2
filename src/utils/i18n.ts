@@ -23,18 +23,48 @@ export const getLangDetails = (lang: string): LanguageDetails | undefined => {
 export const translations = {
   fa: {
     greeting: 'سلام دنیا!',
-    homepageTitle: 'صفحه اصلی',
+    homepageTitle: 'آژانس سئو | خدمات حرفه‌ای بهینه‌سازی موتور جستجو',
+    skipToContent: 'پرش به محتوای اصلی',
+    navServices: 'خدمات',
+    navPricing: 'قیمت‌گذاری',
+    navBlog: 'بلاگ',
+    navContact: 'تماس',
+    ctaButton: 'درخواست مشاوره',
+    footerAbout: 'درباره ما',
+    footerPrivacy: 'حریم خصوصی',
+    footerTerms: 'شرایط خدمات',
+    footerRights: 'تمامی حقوق محفوظ است.',
   },
   en: {
     greeting: 'Hello World!',
-    homepageTitle: 'Homepage',
+    homepageTitle: 'SEO Agency | Professional Search Engine Optimization Services',
+    skipToContent: 'Skip to main content',
+    navServices: 'Services',
+    navPricing: 'Pricing',
+    navBlog: 'Blog',
+    navContact: 'Contact',
+    ctaButton: 'Request a Consultation',
+    footerAbout: 'About Us',
+    footerPrivacy: 'Privacy Policy',
+    footerTerms: 'Terms of Service',
+    footerRights: 'All rights reserved.',
   },
   ar: {
     greeting: 'مرحبا بالعالم!',
-    homepageTitle: 'الصفحة الرئيسية',
+    homepageTitle: 'وكالة سيو | خدمات تحسين محركات البحث الاحترافية',
+    skipToContent: 'تخطي إلى المحتوى الرئيسي',
+    navServices: 'الخدمات',
+    navPricing: 'التسعير',
+    navBlog: 'المدونة',
+    navContact: 'اتصل',
+    ctaButton: 'اطلب استشارة',
+    footerAbout: 'معلومات عنا',
+    footerPrivacy: 'سياسة الخصوصية',
+    footerTerms: 'شروط الخدمة',
+    footerRights: 'كل الحقوق محفوظة.',
   },
 };
 
 export const t = (lang: Language, key: keyof (typeof translations)[Language]) => {
-    return translations[lang][key] || translations[defaultLang][key];
-}
+  return translations[lang][key] || translations[defaultLang][key];
+};

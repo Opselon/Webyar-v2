@@ -2,7 +2,7 @@
   "name": "persian-seo-website",
   "version": "1.0.0",
   "description": "Persian-first, multi-language SEO services website on Cloudflare Workers",
-  "main": "src/index.ts",
+  "main": "src/index.tsx",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
