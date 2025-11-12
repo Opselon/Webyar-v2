@@ -5,36 +5,165 @@
       "slug": "saas-company-growth",
       "client": "SaaS Company",
       "industry": "SaaS",
+      "type": "growth",
       "duration": 9,
+      "heroImage": "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80",
+      "kpi": "+120% Organic Sessions",
       "translations": {
         "fa": {
           "title": "رشد ۱۲۰٪ ترافیک ارگانیک برای یک شرکت SaaS",
-          "problem": "مشتری با وجود محصول عالی، در جذب ترافیک ارگانیک و دیده شدن در کلمات کلیدی اصلی صنعت خود با مشکل مواجه بود.",
-          "solution": "ما یک استراتژی جامع سئوی تکنیکال و محتوایی را پیاده‌سازی کردیم که بر بهینه‌سازی Core Web Vitals و ایجاد محتوای تخصصی متمرکز بود.",
+          "problem": "با وجود محصول عالی، تیم رشد در جذب سرنخ ارگانیک و پوشش کلمات کلیدی مهم صنعت با مشکل روبه‌رو بود.",
+          "solution": "طراحی استراتژی یکپارچه سئوی تکنیکال، محتوا و لینک‌سازی تاکتیکی همراه با داشبورد تحلیل لحظه‌ای.",
           "results": [
             { "metric": "ترافیک ارگانیک", "value": "+120%" },
-            { "metric": "لیدهای ورودی", "value": "+60%" },
-            { "metric": "رتبه در کلمات کلیدی اصلی", "value": "صفحه اول گوگل" }
+            { "metric": "لیدهای بازاریابی", "value": "+60%" },
+            { "metric": "Core Web Vitals", "value": "همه سبز" }
           ]
         },
         "en": {
           "title": "120% Organic Traffic Growth for a SaaS Company",
-          "problem": "Despite having a great product, the client struggled to attract organic traffic and gain visibility for key industry keywords.",
-          "solution": "We implemented a comprehensive technical and content SEO strategy, focusing on Core Web Vitals optimization and creating expert-level content.",
+          "problem": "Despite product-market fit, the growth team struggled to attract organic demand for category-defining terms.",
+          "solution": "Delivered an integrated strategy across technical SEO, content velocity, and tactical link acquisition with live analytics dashboards.",
           "results": [
             { "metric": "Organic Traffic", "value": "+120%" },
-            { "metric": "Inbound Leads", "value": "+60%" },
-            { "metric": "Ranking for Core Keywords", "value": "First Page of Google" }
+            { "metric": "Marketing Qualified Leads", "value": "+60%" },
+            { "metric": "Core Web Vitals", "value": "All green" }
           ]
         },
         "ar": {
-          "title": "نمو بنسبة 120٪ في حركة المرور العضوية لشركة SaaS",
-          "problem": "على الرغم من وجود منتج رائع ، كافح العميل لجذب حركة المرور العضوية واكتساب رؤية للكلمات الرئيسية الرئيسية في الصناعة.",
-          "solution": "لقد قمنا بتنفيذ استراتيجية شاملة للسيو التقني والمحتوى ، مع التركيز على تحسين مؤشرات الويب الأساسية وإنشاء محتوى على مستوى الخبراء.",
+          "title": "نمو بنسبة 120٪ في الزيارات العضوية لشركة SaaS",
+          "problem": "على الرغم من توافق المنتج مع السوق، واجه فريق النمو صعوبة في جذب الطلب العضوي للمصطلحات الرئيسية في القطاع.",
+          "solution": "تنفيذ استراتيجية متكاملة تغطي السيو التقني وتسريع المحتوى واكتساب الروابط التكتيكية مع لوحات تحكم تحليلية مباشرة.",
           "results": [
-            { "metric": "حركة المرور العضوية", "value": "+ 120٪" },
-            { "metric": "العملاء المحتملون الوافدون", "value": "+ 60٪" },
-            { "metric": "الترتيب للكلمات الرئيسية الأساسية", "value": "الصفحة الأولى من Google" }
+            { "metric": "الزيارات العضوية", "value": "+120%" },
+            { "metric": "العملاء المحتملون المؤهلون", "value": "+60%" },
+            { "metric": "مؤشرات الويب الأساسية", "value": "جميعها ضمن النطاق الأخضر" }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "slug": "ecommerce-migration",
+      "client": "Aurora Retail",
+      "industry": "E-commerce",
+      "type": "migration",
+      "duration": 6,
+      "heroImage": "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=1200&q=80",
+      "kpi": "0% Traffic Loss",
+      "translations": {
+        "fa": {
+          "title": "مهاجرت فروشگاه آنلاین بدون افت ترافیک",
+          "problem": "ری‌پلتفرم بزرگ به سرور جدید با خطر افت رتبه و ترافیک همراه بود و منابع داخلی محدود بودند.",
+          "solution": "تعریف نقشه مهاجرت، تست خودکار hreflang، همگام‌سازی داده محصول و راه‌اندازی ریدایرکت‌های هوشمند.",
+          "results": [
+            { "metric": "ترافیک ارگانیک", "value": "0% افت" },
+            { "metric": "Revenue ارگانیک", "value": "+18%" },
+            { "metric": "مدت ایندکس", "value": "72 ساعت" }
+          ]
+        },
+        "en": {
+          "title": "Zero-Loss Migration for a Global E-commerce Brand",
+          "problem": "A full replatform to headless commerce risked severe traffic drops while internal resources were constrained.",
+          "solution": "Delivered migration blueprints, automated hreflang QA, product data sync, and intelligent redirect orchestration.",
+          "results": [
+            { "metric": "Organic Traffic", "value": "0% loss" },
+            { "metric": "Organic Revenue", "value": "+18%" },
+            { "metric": "Re-index Time", "value": "72 hours" }
+          ]
+        },
+        "ar": {
+          "title": "هجرة متجر إلكتروني بدون فقدان للحركة",
+          "problem": "إعادة المنصة بالكامل إلى بنية جديدة كانت تحمل مخاطر فقدان كبير في الترتيب مع موارد داخلية محدودة.",
+          "solution": "وضعنا مخطط هجرة شامل، واختبارات hreflang مؤتمتة، ومزامنة بيانات المنتجات، وتوجيهات ذكية.",
+          "results": [
+            { "metric": "الزيارات العضوية", "value": "0% فقد" },
+            { "metric": "الإيرادات العضوية", "value": "+18%" },
+            { "metric": "زمن إعادة الفهرسة", "value": "72 ساعة" }
+          ]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "slug": "media-publisher-automation",
+      "client": "Nova Media",
+      "industry": "Media",
+      "type": "content",
+      "duration": 8,
+      "heroImage": "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=1200&q=80",
+      "kpi": "2.5x Content Velocity",
+      "translations": {
+        "fa": {
+          "title": "شتاب ۲.۵ برابری تولید محتوا برای ناشر رسانه‌ای",
+          "problem": "تیم تحریریه به ابزار، فرآیند و داده برای پوشش سریع موضوعات ترند نیاز داشت.",
+          "solution": "ساخت پلتفرم هوش محتوایی، تقویم لحظه‌ای موضوعات و گردش‌کار انتشار با بررسی کیفی خودکار.",
+          "results": [
+            { "metric": "سرعت تولید محتوا", "value": "۲.۵ برابر" },
+            { "metric": "CTR نتایج برتر", "value": "+34%" },
+            { "metric": "زمان انتشار", "value": "-40%" }
+          ]
+        },
+        "en": {
+          "title": "2.5x Content Velocity for a Global Publisher",
+          "problem": "Editorial teams lacked the workflows, tooling, and data signals to capture trending topics fast enough.",
+          "solution": "Built an AI-assisted intelligence layer, live topic calendar, and QA-backed publishing workflow.",
+          "results": [
+            { "metric": "Content Velocity", "value": "2.5x" },
+            { "metric": "Top Stories CTR", "value": "+34%" },
+            { "metric": "Publishing Time", "value": "-40%" }
+          ]
+        },
+        "ar": {
+          "title": "زيادة سرعة إنتاج المحتوى بمقدار 2.5 مرة للناشر",
+          "problem": "فريق التحرير افتقر إلى الأدوات والعمليات والبيانات لالتقاط الموضوعات الرائجة بسرعة.",
+          "solution": "أنشأنا طبقة ذكاء مدعومة بالذكاء الاصطناعي، وتقويم مواضيع لحظي، وتدفق نشر مع فحص جودة مؤتمت.",
+          "results": [
+            { "metric": "سرعة المحتوى", "value": "2.5x" },
+            { "metric": "نسبة النقر على الأخبار الرئيسية", "value": "+34%" },
+            { "metric": "وقت النشر", "value": "-40%" }
+          ]
+        }
+      }
+    },
+    {
+      "id": 4,
+      "slug": "fintech-international-expansion",
+      "client": "Helix Fintech",
+      "industry": "Fintech",
+      "type": "international",
+      "duration": 12,
+      "heroImage": "https://images.unsplash.com/photo-1454165205744-3b78555e5572?auto=format&fit=crop&w=1200&q=80",
+      "kpi": "+4 Markets Launched",
+      "translations": {
+        "fa": {
+          "title": "ورود موفق فین‌تک به ۴ بازار جدید",
+          "problem": "ورود هم‌زمان به بازارهای خاورمیانه و اروپا نیازمند ساختاردهی hreflang، محتوا و هماهنگی قانونی بود.",
+          "solution": "طراحی معماری چندزبانه، فرآیند بومی‌سازی مشترک با تیم‌های حقوقی و راه‌اندازی داشبورد عملکرد منطقه‌ای.",
+          "results": [
+            { "metric": "بازارهای فعال", "value": "۴ کشور" },
+            { "metric": "Signup ارگانیک", "value": "+52%" },
+            { "metric": "زمان لانچ", "value": "۱۰ هفته" }
+          ]
+        },
+        "en": {
+          "title": "Fintech International Launch Across 4 Markets",
+          "problem": "Simultaneous expansion into MENA and EU markets required airtight hreflang, regulated content, and partner coordination.",
+          "solution": "Designed multilingual architecture, co-created localisation with legal & compliance, and deployed regional performance dashboards.",
+          "results": [
+            { "metric": "Markets Activated", "value": "4 countries" },
+            { "metric": "Organic Signups", "value": "+52%" },
+            { "metric": "Launch Timeline", "value": "10 weeks" }
+          ]
+        },
+        "ar": {
+          "title": "إطلاق شركة فينتك في 4 أسواق جديدة",
+          "problem": "التوسع المتزامن في أسواق الشرق الأوسط وأوروبا تطلب تنظيم hreflang دقيقًا ومحتوى متوافقًا مع اللوائح.",
+          "solution": "صممنا هندسة متعددة اللغات، وعملنا مع فرق الامتثال على التوطين، وأطلقنا لوحات متابعة لكل منطقة.",
+          "results": [
+            { "metric": "الأسواق المفعلة", "value": "4 دول" },
+            { "metric": "التسجيلات العضوية", "value": "+52%" },
+            { "metric": "مدة الإطلاق", "value": "10 أسابيع" }
           ]
         }
       }

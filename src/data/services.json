@@ -2,72 +2,216 @@
   "services": [
     {
       "id": "technical-seo",
-      "icon": "icon-technical",
+      "icon": "code",
       "translations": {
         "fa": {
           "title": "سئوی تکنیکال",
-          "description": "بهینه‌سازی زیرساخت وب‌سایت شما برای حداکثر کارایی و قابلیت ایندکس شدن.",
+          "description": "پایه فنی قدرتمند برای خزیدن سریع، Core Web Vitals عالی و سایت بدون خطا می‌سازیم.",
           "details": [
-            "آنالیز ساختار سایت",
-            "بهبود سرعت و Core Web Vitals",
-            "پیاده‌سازی Schema Markup",
-            "آنالیز لاگ‌ها"
+            "آنالیز ساختار و معماری سایت",
+            "پایش مداوم Core Web Vitals",
+            "بهینه‌سازی رندر سمت سرور و جاوااسکریپت",
+            "اتومات‌سازی بررسی‌ها در CI/CD"
           ]
         },
         "en": {
           "title": "Technical SEO",
-          "description": "Optimizing your website's infrastructure for maximum performance and indexability.",
+          "description": "We engineer the technical foundations that unlock crawl efficiency, flawless Core Web Vitals, and zero critical errors.",
           "details": [
-            "Site Structure Analysis",
-            "Speed & Core Web Vitals Improvement",
-            "Schema Markup Implementation",
-            "Log Analysis"
+            "Architecture & crawl budget diagnostics",
+            "Continuous Core Web Vitals monitoring",
+            "Server-side rendering & JavaScript optimisation",
+            "Automated QA integrated into CI/CD"
           ]
         },
         "ar": {
-          "title": "سيو تقني",
-          "description": "تحسين البنية التحتية لموقعك لتحقيق أقصى أداء وقابلية للفهرسة.",
+          "title": "السيو التقني",
+          "description": "نبني أساسًا تقنيًا قويًا لزحف أسرع، ومؤشرات ويب أساسية مثالية، وموقع خالٍ من الأخطاء الحرجة.",
           "details": [
-            "تحليل بنية الموقع",
-            "تحسين السرعة ومؤشرات الويب الأساسية",
-            "تنفيذ ترميز Schema",
-            "تحليل السجلات"
+            "تحليل البنية والميزانية المخصصة للزحف",
+            "مراقبة مستمرة لمؤشرات الويب الأساسية",
+            "تحسين العرض من جانب الخادم وجافاسكربت",
+            "اختبارات مؤتمتة مدمجة في CI/CD"
           ]
         }
       }
     },
     {
       "id": "on-page-seo",
-      "icon": "icon-onpage",
+      "icon": "stack",
       "translations": {
         "fa": {
-          "title": "سئوی داخلی (On-Page)",
-          "description": "بهینه‌سازی محتوا و عناصر صفحات برای رتبه‌گیری بهتر در کلمات کلیدی هدف.",
+          "title": "سئوی داخلی",
+          "description": "تجربه محتوای شما را با تحقیق عمیق کلمات کلیدی، ساختاردهی هوشمند و بهینه‌سازی هدفمند ارتقا می‌دهیم.",
           "details": [
-            "تحقیق کلمات کلیدی",
-            "بهینه‌سازی تگ‌های متا",
-            "ساختاردهی محتوا (H1/H2)",
-            "لینک‌سازی داخلی"
+            "تحقیق موضوعی مبتنی بر خوشه",
+            "طراحی ساختار محتوا و Internal Linking",
+            "بهینه‌سازی متادیتا و Snippet",
+            "بررسی تجربه کاربری و نرخ تبدیل"
           ]
         },
         "en": {
-          "title": "On-Page SEO",
-          "description": "Optimizing page content and elements to rank higher for target keywords.",
+          "title": "On-Page Experience",
+          "description": "Elevating every URL with semantic research, intelligent structure, and conversion-focused optimisation.",
           "details": [
-            "Keyword Research",
-            "Meta Tag Optimization",
-            "Content Structuring (H1/H2)",
-            "Internal Linking"
+            "Topic cluster and entity research",
+            "Information architecture & internal linking",
+            "Metadata and rich snippet optimisation",
+            "UX diagnostics to lift conversions"
           ]
         },
         "ar": {
-          "title": "سيو على الصفحة",
-          "description": "تحسين محتوى الصفحة وعناصرها للحصول على ترتيب أعلى للكلمات الرئيسية المستهدفة.",
+          "title": "تجربة الصفحة",
+          "description": "نرفع قيمة كل صفحة عبر بحث دلالي، وهيكلة ذكية، وتحسين يركز على التحويل.",
           "details": [
-            "بحث الكلمات الرئيسية",
-            "تحسين العلامات الوصفية",
-            "هيكلة المحتوى (H1 / H2)",
-            "الربط الداخلي"
+            "بحث المجموعات الموضوعية والكيانات",
+            "هندسة المعلومات والربط الداخلي",
+            "تحسين البيانات الوصفية والنتائج الغنية",
+            "تحليلات تجربة المستخدم لزيادة التحويل"
+          ]
+        }
+      }
+    },
+    {
+      "id": "off-page-seo",
+      "icon": "network",
+      "translations": {
+        "fa": {
+          "title": "سئوی خارجی و لینک‌سازی",
+          "description": "اعتبار دامنه را با کمپین‌های دیجیتال PR، لینک‌های باکیفیت و مدیریت برند تقویت می‌کنیم.",
+          "details": [
+            "استراتژی لینک‌سازی داده‌محور",
+            "کمپین‌های Digital PR و رسانه",
+            "پایش برند و مدیریت اعتبار",
+            "آنالیز پروفایل بک‌لینک رقبا"
+          ]
+        },
+        "en": {
+          "title": "Off-Page Authority",
+          "description": "Scaling domain authority through data-led outreach, authoritative coverage, and brand protection.",
+          "details": [
+            "Link acquisition programmes with predictive scoring",
+            "Digital PR activations and newsroom collaboration",
+            "Brand monitoring & reputation management",
+            "Competitive backlink intelligence"
+          ]
+        },
+        "ar": {
+          "title": "السلطة الخارجية",
+          "description": "نعزز سلطة النطاق عبر حملات تواصل تعتمد على البيانات، وتغطية إعلامية موثوقة، وحماية للعلامة التجارية.",
+          "details": [
+            "برامج اكتساب الروابط مع تقييم تنبؤي",
+            "حملات علاقات عامة رقمية وتعاون إعلامي",
+            "مراقبة العلامة وإدارة السمعة",
+            "تحليلات الروابط الخلفية للمنافسين"
+          ]
+        }
+      }
+    },
+    {
+      "id": "content-seo",
+      "icon": "radar",
+      "translations": {
+        "fa": {
+          "title": "استراتژی محتوا و سئوی معنایی",
+          "description": "نقشه محتوای چندزبانۀ شما را با داده‌های جستجو، نیت کاربر و هوش مصنوعی طراحی می‌کنیم.",
+          "details": [
+            "نقشه‌راه محتوا و کانتنت پیلار",
+            "مدل‌سازی نیت و شخصی‌سازی سفر کاربر",
+            "تولید و بهبود محتوا با هوش مصنوعی انسانی",
+            "سیستم حکمرانی محتوا و KPI"
+          ]
+        },
+        "en": {
+          "title": "Content & Semantic SEO",
+          "description": "Designing multilingual content systems aligned with search demand, intent, and intelligent automation.",
+          "details": [
+            "Content roadmaps and pillar systems",
+            "Intent modelling & personalised journeys",
+            "Human-led, AI-assisted content operations",
+            "Governance, QA, and performance KPIs"
+          ]
+        },
+        "ar": {
+          "title": "المحتوى والسيو الدلالي",
+          "description": "نصمم أنظمة محتوى متعددة اللغات متوافقة مع طلب البحث والنوايا والأتمتة الذكية.",
+          "details": [
+            "خرائط طريق المحتوى وأنظمة الأعمدة",
+            "نمذجة النية ورحلات مخصصة",
+            "عمليات محتوى يقودها الخبراء مدعومة بالذكاء الاصطناعي",
+            "حوكمة المحتوى ومؤشرات الأداء"
+          ]
+        }
+      }
+    },
+    {
+      "id": "international-seo",
+      "icon": "globe",
+      "translations": {
+        "fa": {
+          "title": "سئوی بین‌المللی و چندزبانه",
+          "description": "گسترش جهانی را با ساختاردهی hreflang، محلی‌سازی حرفه‌ای و استراتژی بازار هدف آسان می‌کنیم.",
+          "details": [
+            "طراحی معماری چندزبانه و تعیین اولویت بازار",
+            "پیاده‌سازی hreflang و کنترل نسخه",
+            "ترجمه و بومی‌سازی تخصصی",
+            "پایش عملکرد در بازارهای مختلف"
+          ]
+        },
+        "en": {
+          "title": "International SEO",
+          "description": "Driving global expansion with technical hreflang architecture, expert localisation, and market intelligence.",
+          "details": [
+            "Multilingual architecture & market prioritisation",
+            "Hreflang implementation and governance",
+            "Specialist localisation workflow",
+            "Market performance dashboards"
+          ]
+        },
+        "ar": {
+          "title": "السيو الدولي",
+          "description": "نمكن التوسع العالمي عبر هيكلة hreflang، وتوطين احترافي، واستراتيجية موجهة بالبيانات لكل سوق.",
+          "details": [
+            "هندسة متعددة اللغات وتحديد أولويات الأسواق",
+            "تطبيق hreflang وإدارة الإصدارات",
+            "عمليات توطين احترافية",
+            "مراقبة الأداء في الأسواق المختلفة"
+          ]
+        }
+      }
+    },
+    {
+      "id": "analytics-reporting",
+      "icon": "analytics",
+      "translations": {
+        "fa": {
+          "title": "آنالیتیکس و گزارش‌دهی",
+          "description": "داشبوردهای زنده، مدل‌سازی رشد و KPIهای قابل اقدام را برای تیم‌های محصول و مدیریت ارائه می‌دهیم.",
+          "details": [
+            "داشبورد داده‌محور سفارشی",
+            "مدل‌سازی سناریو و پیش‌بینی",
+            "هماهنگی با تیم‌های دیتا و محصول",
+            "گزارشات مدیریتی چندزبانه"
+          ]
+        },
+        "en": {
+          "title": "Analytics & Intelligence",
+          "description": "Delivering real-time dashboards, growth modelling, and executive storytelling across teams.",
+          "details": [
+            "Custom analytics workspaces",
+            "Scenario modelling & forecasting",
+            "Data product alignment & instrumentation",
+            "Multilingual executive reporting"
+          ]
+        },
+        "ar": {
+          "title": "التحليلات والذكاء",
+          "description": "نوفر لوحات تحكم لحظية، ونمذجة للنمو، وتقارير تنفيذية متعددة اللغات.",
+          "details": [
+            "مساحات تحليلات مخصصة",
+            "نمذجة السيناريوهات والتنبؤ",
+            "مواءمة المنتجات الرقمية وأدوات القياس",
+            "تقارير تنفيذية متعددة اللغات"
           ]
         }
       }

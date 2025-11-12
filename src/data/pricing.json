@@ -4,35 +4,90 @@
       "id": "kickstart-seo",
       "type": "short-term",
       "duration": 3,
+      "billing": "project",
+      "price": 4800,
+      "currency": "USD",
       "translations": {
         "fa": {
-          "title": "Kickstart SEO",
-          "description": "بهینه‌سازی تکنیکال اولیه و پیاده‌سازی سریع برای نتایج فوری.",
+          "title": "Kickstart SEO Audit",
+          "description": "تحلیل ۳۶۰ درجه و اجرای سریع برای تثبیت پایه فنی و محتوایی.",
+          "badge": "۳ ماهه",
+          "priceLabel": "شروع از ۴٬۸۰۰ دلار",
           "features": [
-            "آنالیز جامع وب‌سایت",
-            "تحقیق کلمات کلیدی اولیه",
-            "بهینه‌سازی ۵ صفحه اصلی",
-            "گزارش پیشرفت ماهانه"
+            "آدیت تکنیکال ۱۲۰+ نقطه",
+            "تحقیق کلمات کلیدی سطح اول",
+            "بهینه‌سازی ۸ صفحه حیاتی",
+            "نقشه راه ۹۰ روزه + گزارش نهایی"
           ]
         },
         "en": {
-          "title": "Kickstart SEO",
-          "description": "Initial technical optimization and quick-win implementation for immediate results.",
+          "title": "Kickstart SEO Audit",
+          "description": "A 360° diagnostic and rapid implementation to stabilise technical and content foundations.",
+          "badge": "3 Months",
+          "priceLabel": "Starting at $4,800",
           "features": [
-            "Comprehensive Website Audit",
-            "Initial Keyword Research",
-            "Optimization of 5 Core Pages",
-            "Monthly Progress Report"
+            "120+ point technical audit",
+            "Level-one keyword & entity research",
+            "Optimisation of 8 critical pages",
+            "90-day roadmap with executive wrap-up"
           ]
         },
         "ar": {
-          "title": "بدء التشغيل السريع للسيو",
-          "description": "التحسين الفني الأولي والتنفيذ السريع لتحقيق نتائج فورية.",
+          "title": "تدقيق السيو الشامل",
+          "description": "تشخيص شامل وتنفيذ سريع لتثبيت الأساس التقني والمحتوائي.",
+          "badge": "3 أشهر",
+          "priceLabel": "يبدأ من 4,800 دولار",
           "features": [
-            "تدقيق شامل للموقع",
-            "بحث أولي للكلمات الرئيسية",
-            "تحسين 5 صفحات أساسية",
-            "تقرير شهري عن التقدم"
+            "تدقيق تقني يشمل أكثر من 120 نقطة",
+            "بحث الكيانات والكلمات الرئيسية من المستوى الأول",
+            "تحسين 8 صفحات محورية",
+            "خارطة طريق لمدة 90 يومًا مع خلاصة تنفيذية"
+          ]
+        }
+      }
+    },
+    {
+      "id": "onpage-sprint",
+      "type": "short-term",
+      "duration": 4,
+      "billing": "project",
+      "price": 7200,
+      "currency": "USD",
+      "translations": {
+        "fa": {
+          "title": "On-Page Optimization Sprint",
+          "description": "۴ هفته تمرکز کامل بر ساختاردهی محتوا، تست A/B و بهبود نرخ تبدیل.",
+          "badge": "۴ هفته",
+          "priceLabel": "شروع از ۷٬۲۰۰ دلار",
+          "features": [
+            "استراتژی کلاستر محتوا",
+            "طراحی پیام و On-page Copy",
+            "آزمایش A/B در صفحات کلیدی",
+            "گزارش هفتگی و آموزش تیم"
+          ]
+        },
+        "en": {
+          "title": "On-Page Optimisation Sprint",
+          "description": "A four-week intensive to rebuild content architecture, run A/B tests, and uplift conversions.",
+          "badge": "4 Weeks",
+          "priceLabel": "Starting at $7,200",
+          "features": [
+            "Content cluster and messaging strategy",
+            "UX writing & on-page copy refresh",
+            "A/B testing for priority journeys",
+            "Weekly reporting and enablement workshops"
+          ]
+        },
+        "ar": {
+          "title": "سباق التحسين على الصفحة",
+          "description": "أربعة أسابيع مكثفة لإعادة هيكلة المحتوى، وإجراء اختبارات A/B، وزيادة التحويلات.",
+          "badge": "4 أسابيع",
+          "priceLabel": "يبدأ من 7,200 دولار",
+          "features": [
+            "استراتيجية مجموعات المحتوى والرسائل",
+            "كتابة وتجديد المحتوى داخل الصفحة",
+            "اختبارات A/B للرحلات ذات الأولوية",
+            "تقرير أسبوعي وجلسات تمكين للفريق"
           ]
         }
       }
@@ -41,35 +96,135 @@
       "id": "growth-retainer",
       "type": "long-term",
       "duration": 6,
+      "billing": "monthly",
+      "price": 3800,
+      "currency": "USD",
       "translations": {
         "fa": {
           "title": "Growth Retainer",
-          "description": "استراتژی ماهانه و بهینه‌سازی مداوم برای رشد پایدار.",
+          "description": "همکاری شش‌ماهه برای اجرای مستمر، تحلیل داده و پشتیبانی محصول.",
+          "badge": "محبوب",
+          "priceLabel": "۳٬۸۰۰ دلار در ماه",
           "features": [
-            "تمام موارد پکیج Kickstart",
-            "استراتژی و تولید محتوا",
-            "لینک‌سازی پایه‌ای",
-            "داشبورد تحلیلی اختصاصی"
+            "۵۰+ ساعت مشاوره و اجرا در ماه",
+            "تقویم محتوای چندزبانه",
+            "لینک‌سازی تاکتیکی + Digital PR",
+            "داشبورد زنده KPI و جلسه Executive"
           ]
         },
         "en": {
           "title": "Growth Retainer",
-          "description": "Monthly strategy and continuous optimization for sustainable growth.",
+          "description": "Six months of ongoing execution, intelligence, and cross-team product support.",
+          "badge": "Most selected",
+          "priceLabel": "$3,800 / month",
           "features": [
-            "All features from Kickstart package",
-            "Content Strategy & Creation",
-            "Foundational Link Building",
-            "Dedicated Analytics Dashboard"
+            "50+ hours of consulting & implementation monthly",
+            "Multilingual content calendar",
+            "Tactical link acquisition & digital PR",
+            "Live KPI workspace + executive steering"
           ]
         },
         "ar": {
           "title": "عقد النمو",
-          "description": "استراتيجية شهرية وتحسين مستمر لتحقيق نمو مستدام.",
+          "description": "ستة أشهر من التنفيذ المستمر، والتحليلات، ودعم فرق المنتج.",
+          "badge": "الأكثر اختيارًا",
+          "priceLabel": "3,800 دولار شهريًا",
           "features": [
-            "جميع ميزات باقة بدء التشغيل السريع",
-            "استراتيجية وإنشاء المحتوى",
-            "بناء الروابط الأساسية",
-            "لوحة تحكم تحليلية مخصصة"
+            "أكثر من 50 ساعة استشارة وتنفيذ شهريًا",
+            "تقويم محتوى متعدد اللغات",
+            "اكتساب روابط تكتيكية وعلاقات عامة رقمية",
+            "لوحة تحكم KPI مباشرة مع اجتماعات تنفيذية"
+          ]
+        }
+      }
+    },
+    {
+      "id": "scale-retainer",
+      "type": "long-term",
+      "duration": 12,
+      "billing": "monthly",
+      "price": 6200,
+      "currency": "USD",
+      "translations": {
+        "fa": {
+          "title": "Scale Retainer",
+          "description": "دوازده ماه مقیاس‌پذیری جهانی با اسکواد بین‌المللی، مهندسی داده و مدیریت تغییر.",
+          "badge": "انترپرایز",
+          "priceLabel": "۶٬۲۰۰ دلار در ماه",
+          "features": [
+            "اسکواد SEO + دیتا + محتوا اختصاصی",
+            "پودمان‌های International و Localisation",
+            "اتوماسیون گزارش‌دهی و Alerting",
+            "پشتیبانی DevOps و CI/CD سئو"
+          ]
+        },
+        "en": {
+          "title": "Scale Retainer",
+          "description": "Twelve months to orchestrate global scale with embedded squads, data engineering, and change enablement.",
+          "badge": "Enterprise",
+          "priceLabel": "$6,200 / month",
+          "features": [
+            "Dedicated SEO + data + content squad",
+            "International SEO & localisation modules",
+            "Automated reporting and alerting fabric",
+            "DevOps & CI/CD SEO engineering support"
+          ]
+        },
+        "ar": {
+          "title": "عقد التوسع",
+          "description": "اثنا عشر شهرًا للتوسع العالمي عبر فرق مدمجة وهندسة بيانات وإدارة تغيير.",
+          "badge": "مؤسسات",
+          "priceLabel": "6,200 دولار شهريًا",
+          "features": [
+            "فريق مخصص للسيو والبيانات والمحتوى",
+            "وحدات السيو الدولي والتوطين",
+            "أتمتة التقارير ونظام التنبيه",
+            "دعم هندسة DevOps وCI/CD للسيو"
+          ]
+        }
+      }
+    },
+    {
+      "id": "enterprise-custom",
+      "type": "long-term",
+      "duration": 12,
+      "billing": "custom",
+      "custom": true,
+      "translations": {
+        "fa": {
+          "title": "Enterprise Custom Program",
+          "description": "برای ادغام با تیم‌های داخلی، زیرساخت داده و اهداف بازار خاص شما طراحی می‌شود.",
+          "badge": "سفارشی",
+          "priceLabel": "پیشنهاد اختصاصی",
+          "features": [
+            "ارزیابی بلوغ و طراحی Operating Model",
+            "Roadmap تحول چندکشور",
+            "آموزش تیم داخلی و انتقال دانش",
+            "Service Level Agreement اختصاصی"
+          ]
+        },
+        "en": {
+          "title": "Enterprise Custom Program",
+          "description": "Co-designed with your data, product, and marketing leadership to achieve market-specific outcomes.",
+          "badge": "Custom",
+          "priceLabel": "Request proposal",
+          "features": [
+            "Maturity assessment & operating model design",
+            "Multi-market transformation roadmap",
+            "Internal team enablement and knowledge transfer",
+            "Bespoke service level agreements"
+          ]
+        },
+        "ar": {
+          "title": "برنامج المؤسسات المخصص",
+          "description": "يُصمم بالتعاون مع فرق البيانات والمنتج والتسويق لديكم لتحقيق أهداف كل سوق.",
+          "badge": "مخصص",
+          "priceLabel": "اطلب عرضًا",
+          "features": [
+            "تقييم الجاهزية وتصميم نموذج التشغيل",
+            "خارطة تحول متعددة الأسواق",
+            "تمكين الفرق الداخلية ونقل المعرفة",
+            "اتفاقيات مستوى خدمة مصممة خصيصًا"
           ]
         }
       }
