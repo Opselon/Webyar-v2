@@ -64,8 +64,11 @@ Disallow:
 
 Sitemap: https://seo.webyar.cloud/sitemap.xml
   `.trim();
+
   return c.body(robots, 200, {
     'Content-Type': 'text/plain',
+    'Content-Signal': 'search=yes, ai-input=yes, ai-train=yes',
+    'Cache-Control': 'public, max-age=3600',
   });
 });
 

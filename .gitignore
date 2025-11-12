@@ -11,3 +11,4 @@ pnpm-debug.log*
 .pnpm-debug.log*
 .npm/
 .pnp.*
+wrangler.toml
