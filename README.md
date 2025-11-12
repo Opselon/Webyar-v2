@@ -1,11 +1,22 @@
 # 🚀 WebYar v2: Multi-language SEO Website
 
 ![GitHub license](https://img.shields.io/github/license/Opselon/Webyar-v2?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/Opselon/Webyar-v2?style=flat-square&color=FFCA28)
+![GitHub last commit](https://img.shields.io/github/last-commit/Opselon/Webyar-v2?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Opselon/Webyar-v2/ci.yml?branch=main&style=flat-square&label=CI%20Build)
+
+---
+
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Hono](https://img.shields.io/badge/Hono-000000?style=flat-square&logo=hono&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
 ![Playwright](https://img.shields.io/badge/Playwright-21F641?style=flat-square&logo=playwright&logoColor=white)
 
+---
+
+![RTL Support](https://img.shields.io/badge/RTL%20Support-fa%20ar-purple?style=flat-square&logo=gitlfs)
+![Dark Mode](https://img.shields.io/badge/Dark%20Mode-Included-1C1C1C?style=flat-square&logo=materialdesign)
+![SEO Ready](https://img.shields.io/badge/SEO-Optimized-1E90FF?style=flat-square&logo=searchengineoptimization)
 ---
 
 ## 🌟 Overview: The Global SEO Powerhouse
