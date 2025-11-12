@@ -3,6 +3,7 @@ import { FC } from 'hono/jsx';
 import { Layout } from '../layout';
 import { SectionHeader } from '../components/SectionHeader';
 import { Accordion } from '../components/Accordion';
+import { Card } from '../components/Card';
 import { Language, languages } from '../../utils/i18n';
 
 interface FAQProps {

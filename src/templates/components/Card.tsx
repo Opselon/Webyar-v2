@@ -1,5 +1,5 @@
 import { jsx } from 'hono/jsx';
-import { FC, PropsWithChildren } from 'hono/jsx';
+import { FC, JSX, PropsWithChildren } from 'hono/jsx';
 
 type CardVariant = 'glass' | 'solid' | 'soft';
 
@@ -7,6 +7,7 @@ interface CardProps extends PropsWithChildren {
   variant?: CardVariant;
   interactive?: boolean;
   className?: string;
+  key?: string | number;
 }
 
 const variantStyles: Record<CardVariant, string> = {

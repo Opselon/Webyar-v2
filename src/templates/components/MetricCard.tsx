@@ -1,5 +1,5 @@
 import { jsx } from 'hono/jsx';
-import { FC } from 'hono/jsx';
+import { FC, JSX } from 'hono/jsx';
 import { Icon } from './Icon';
 
 interface MetricCardProps {
@@ -7,6 +7,7 @@ interface MetricCardProps {
   label: string;
   value: string;
   trend?: string;
+  key?: string | number;
 }
 
 export const MetricCard: FC<MetricCardProps> = ({ icon, label, value, trend }) => {

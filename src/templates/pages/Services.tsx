@@ -191,7 +191,7 @@ const serviceTabsScript = `
         if (inactive.length) button.classList.remove(...inactive);
         if (active.length) button.classList.add(...active);
 
-        const panel = container.querySelector(`[data-service-panel="${targetId}"]`);
+        const panel = container.querySelector(\`[data-service-panel="\${targetId}"]\`);
         if (panel instanceof HTMLElement) {
           panel.classList.remove('hidden');
         }
