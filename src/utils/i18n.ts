@@ -51,6 +51,7 @@ export const translations = {
     footerRights: 'تمامی حقوق محفوظ است.',
     // Home Page
     homepageTitle: 'آژانس سئو | خدمات حرفه‌ای بهینه‌سازی موتور جستجو',
+    homepageDescription: 'آژانس سئو کوانتوم خدمات حرفه‌ای بهینه‌سازی موتور جستجو را برای کسب‌وکارهای بزرگ ارائه می‌دهد. با ما به صفحه اول گوگل برسید.',
     homeHeroTitle: 'آژانس سئو داده‌محور برای رشد واقعی کسب‌وکار شما',
     homeHeroSubtitle: 'ما تیم‌های بازاریابی و محصول را با بینش تحلیلی، مهندسی سئو و محتوا به رشد پایدار متصل می‌کنیم.',
     homeHeroCtaPrimary: 'درخواست آنالیز رایگان',
@@ -60,26 +61,34 @@ export const translations = {
     homeCaseStudiesTitle: 'نمونه‌کارهای موفق',
     // Services Page
     servicesPageTitle: 'خدمات سئو',
+    servicesPageDescription: 'با خدمات جامع سئو ما، از سئو تکنیکال و بین‌المللی تا استراتژی محتوا و لینک‌سازی، رتبه سایت خود را بهبود دهید.',
     servicesTitle: 'خدمات سئو ۳۶۰ درجه',
     servicesSubtitle: 'از زیرساخت تا استراتژی محتوا، ما تمام جنبه‌های سئو را پوشش می‌دهیم.',
     // Pricing Page
     pricingPageTitle: 'قیمت‌گذاری سئو',
+    pricingPageDescription: 'پلن‌های قیمت‌گذاری شفاف و منطعف سئو برای کسب‌وکارهای کوچک و بزرگ. بهترین پکیج را متناسب با نیاز خود انتخاب کنید.',
     pricingTitle: 'پلن‌های شفاف و منعطف',
     pricingSubtitle: 'ما معتقدیم سئو یک سرمایه‌گذاری بلندمدت است.',
     shortTermPackages: 'پکیج‌های کوتاه‌مدت',
     longTermPackages: 'پکیج‌های بلندمدت',
     // Blog Page
     blogPageTitle: 'بلاگ سئو',
+    blogPageDescription: 'آخرین مقالات، تحلیل‌ها و اخبار دنیای سئو را در بلاگ ما بخوانید. از متخصصان سئو بیاموزید.',
     blogTitle: 'آخرین مقالات و تحلیل‌ها',
     // Case Studies Page
     caseStudiesPageTitle: 'نمونه‌کارها',
+    caseStudiesPageDescription: 'نمونه‌کارهای موفق ما در زمینه سئو را ببینید. ما به کسب‌وکارهای مختلف کمک کرده‌ایم تا به نتایج دلخواه خود برسند.',
     caseStudiesTitle: 'نتایج واقعی برای مشتریان ما',
     caseStudyProblem: 'چالش',
     caseStudySolution: 'راهکار',
     caseStudyResults: 'نتایج',
     caseStudiesFiltersTitle: 'فیلتر پروژه‌ها',
+    // FAQ Page
+    faqPageTitle: 'سوالات متداول سئو',
+    faqPageDescription: 'پاسخ به سوالات متداول در مورد سئو، خدمات ما، قیمت‌گذاری و فرآیندهای کاری.',
     // Contact Page
     contactPageTitle: 'تماس با ما',
+    contactPageDescription: 'برای دریافت مشاوره رایگان سئو و یا ثبت سفارش، با تیم متخصص ما در تماس باشید.',
     contactTitle: 'بیایید صحبت کنیم',
     contactSubtitle: 'فرم زیر را پر کنید تا یک جلسه مشاوره رایگان داشته باشیم.',
     ctaButton: 'درخواست جلسه استراتژی',
@@ -119,6 +128,7 @@ export const translations = {
     footerRights: 'All rights reserved.',
     // Home Page
     homepageTitle: 'SEO Agency | Professional Search Engine Optimization Services',
+    homepageDescription: 'Quantum SEO Agency offers professional search engine optimization services for large businesses. Get to the first page of Google with us.',
     homeHeroTitle: 'Data-Driven SEO Agency for Real Business Growth',
     homeHeroSubtitle: 'We connect marketing and product teams with analytics insight, technical SEO, and content engines built for scale.',
     homeHeroCtaPrimary: 'Request Free Analysis',
@@ -128,26 +138,34 @@ export const translations = {
     homeCaseStudiesTitle: 'Successful Case Studies',
     // Services Page
     servicesPageTitle: 'SEO Services',
+    servicesPageDescription: 'Improve your website ranking with our comprehensive SEO services, from technical and international SEO to content strategy and link building.',
     servicesTitle: '360° SEO Services',
     servicesSubtitle: 'From infrastructure to content strategy, we cover all aspects of SEO.',
     // Pricing Page
     pricingPageTitle: 'SEO Pricing',
+    pricingPageDescription: 'Transparent and flexible SEO pricing plans for small and large businesses. Choose the best package for your needs.',
     pricingTitle: 'Transparent and Flexible Plans',
     pricingSubtitle: 'We believe SEO is a long-term investment.',
     shortTermPackages: 'Short-Term Packages',
     longTermPackages: 'Long-Term Packages',
     // Blog Page
     blogPageTitle: 'SEO Blog',
+    blogPageDescription: 'Read the latest articles, analysis, and news from the SEO world on our blog. Learn from SEO experts.',
     blogTitle: 'Latest Articles and Insights',
     // Case Studies Page
     caseStudiesPageTitle: 'Case Studies',
+    caseStudiesPageDescription: 'See our successful SEO case studies. We have helped various businesses achieve their desired results.',
     caseStudiesTitle: 'Real Results for Our Clients',
     caseStudyProblem: 'The Challenge',
     caseStudySolution: 'The Solution',
     caseStudyResults: 'The Results',
     caseStudiesFiltersTitle: 'Filter projects',
+    // FAQ Page
+    faqPageTitle: 'SEO FAQ',
+    faqPageDescription: 'Answers to frequently asked questions about SEO, our services, pricing, and work processes.',
     // Contact Page
     contactPageTitle: 'Contact Us',
+    contactPageDescription: 'Contact our expert team for a free SEO consultation or to place an order.',
     contactTitle: "Let's Talk",
     contactSubtitle: 'Fill out the form below for a free consultation.',
     ctaButton: 'Book a strategy session',
@@ -187,6 +205,7 @@ export const translations = {
     footerRights: 'كل الحقوق محفوظة.',
     // Home Page
     homepageTitle: 'وكالة سيو | خدمات تحسين محركات البحث الاحترافية',
+    homepageDescription: 'تقدم وكالة كوانتوم للسيو خدمات تحسين محركات البحث الاحترافية للشركات الكبيرة. معنا، تصل إلى الصفحة الأولى في جوجل.',
     homeHeroTitle: 'وكالة سيو تعتمد على البيانات لتحقيق نمو حقيقي للأعمال',
     homeHeroSubtitle: 'نربط فرق التسويق والمنتج برؤى تحليلية وهندسة سيو ومحتوى قابل للتوسع.',
     homeHeroCtaPrimary: 'اطلب تحليلًا مجانيًا',
@@ -196,26 +215,34 @@ export const translations = {
     homeCaseStudiesTitle: 'دراسات حالة ناجحة',
     // Services Page
     servicesPageTitle: 'خدمات السيو',
+    servicesPageDescription: 'حسّن ترتيب موقعك مع خدماتنا الشاملة للسيو، من السيو التقني والدولي إلى استراتيجية المحتوى وبناء الروابط.',
     servicesTitle: 'خدمات سيو ٣٦٠ درجة',
     servicesSubtitle: 'من البنية التحتية إلى استراتيجية المحتوى، نغطي جميع جوانب السيو.',
     // Pricing Page
     pricingPageTitle: 'تسعير السيو',
+    pricingPageDescription: 'خطط أسعار سيو شفافة ومرنة للشركات الصغيرة والكبيرة. اختر الباقة الأنسب لاحتياجاتك.',
     pricingTitle: 'خطط شفافة ومرنة',
     pricingSubtitle: 'نعتقد أن السيو استثمار طويل الأجل.',
     shortTermPackages: 'باقات قصيرة الأجل',
     longTermPackages: 'باقات طويلة الأجل',
     // Blog Page
     blogPageTitle: 'مدونة السيو',
+    blogPageDescription: 'اقرأ أحدث المقالات والتحليلات والأخبار من عالم السيو على مدونتنا. تعلم من خبراء السيو.',
     blogTitle: 'أحدث المقالات والرؤى',
     // Case Studies Page
     caseStudiesPageTitle: 'دراسات الحالة',
+    caseStudiesPageDescription: 'شاهد دراسات الحالة الناجحة في مجال السيو. لقد ساعدنا العديد من الشركات على تحقيق النتائج المرجوة.',
     caseStudiesTitle: 'نتائج حقيقية لعملائنا',
     caseStudyProblem: 'التحدي',
     caseStudySolution: 'الحل',
     caseStudyResults: 'النتائج',
     caseStudiesFiltersTitle: 'تصفية المشاريع',
+    // FAQ Page
+    faqPageTitle: 'أسئلة شائعة حول السيو',
+    faqPageDescription: 'إجابات على الأسئلة الشائعة حول السيو، خدماتنا، الأسعار، وعمليات العمل.',
     // Contact Page
     contactPageTitle: 'اتصل بنا',
+    contactPageDescription: 'تواصل مع فريق خبرائنا للحصول على استشارة مجانية في السيو أو لتقديم طلب.',
     contactTitle: 'دعنا نتحدث',
     contactSubtitle: 'املأ النموذج أدناه للحصول على استشارة مجانية.',
     ctaButton: 'احجز جلسة استراتيجية',

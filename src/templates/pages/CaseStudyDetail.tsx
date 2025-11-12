@@ -24,7 +24,13 @@ export const CaseStudyDetailPage: FC<CaseStudyDetailProps> = ({ lang, slug }) =>
   const isRTL = languages[lang].dir === 'rtl';
 
   return (
-    <Layout lang={lang} title={title} active="caseStudies">
+    <Layout
+      lang={lang}
+      title={title}
+      description={content.problem}
+      canonical={`https://seo.webyar.cloud/${lang}/case-studies/${slug}`}
+      active="caseStudies"
+    >
       <article class="space-y-12">
         <section class="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-white via-brand-50 to-accent-50 shadow-soft dark:from-surface-muted dark:via-surface-muted/70 dark:to-midnight">
           <div class="grid gap-8 lg:grid-cols-[1fr_1.1fr]">

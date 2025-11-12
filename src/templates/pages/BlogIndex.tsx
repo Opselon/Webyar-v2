@@ -54,12 +54,14 @@ const filterScript = `
 
 export const BlogIndexPage: FC<BlogIndexProps> = ({ lang }) => {
   const title = t(lang, 'blogPageTitle');
+  const description = t(lang, 'blogPageDescription');
+  const canonical = `https://seo.webyar.cloud/${lang}/blog`;
   const posts = postsData.posts;
   const isRTL = languages[lang].dir === 'rtl';
   const categories = Array.from(new Set(posts.map((post) => post.category)));
 
   return (
-    <Layout lang={lang} title={title} active="blog">
+    <Layout lang={lang} title={title} description={description} canonical={canonical} active="blog">
       <section class="space-y-10">
         <SectionHeader
           eyebrow={t(lang, 'blogTitle')}

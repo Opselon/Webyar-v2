@@ -148,12 +148,17 @@ const faqContent = {
   },
 };
 
+import { t } from '../../utils/i18n';
+
 export const FAQPage: FC<FAQProps> = ({ lang }) => {
   const locale = faqContent[lang];
   const isRTL = languages[lang].dir === 'rtl';
+  const title = t(lang, 'faqPageTitle');
+  const description = t(lang, 'faqPageDescription');
+  const canonical = `https://seo.webyar.cloud/${lang}/faq`;
 
   return (
-    <Layout lang={lang} title={locale.title} active="faq">
+    <Layout lang={lang} title={title} description={description} canonical={canonical} active="faq">
       <section class="space-y-10">
         <SectionHeader eyebrow={locale.title} title={locale.intro} align="start" />
         <div class="space-y-8">
