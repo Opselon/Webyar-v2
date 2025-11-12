@@ -1,4 +1,4 @@
-# 🚀 WebYar v2: Persian-First Multi-language SEO Website
+# 🚀 WebYar v2: Multi-language SEO Website
 
 ![GitHub license](https://img.shields.io/github/license/Opselon/Webyar-v2?style=flat-square)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
