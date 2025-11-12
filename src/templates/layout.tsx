@@ -1,107 +1,294 @@
 import { jsx } from 'hono/jsx';
 import { FC } from 'hono/jsx';
-import { Language, LanguageDetails, t, languages } from '../utils/i18n';
+import { Language, languages, t } from '../utils/i18n';
 
 interface LayoutProps {
   lang: Language;
   title: string;
+  active?: 'home' | 'services' | 'pricing' | 'blog' | 'caseStudies' | 'faq' | 'contact';
 }
 
 const themeScript = `
-  const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const storedTheme = localStorage.getItem('theme');
+  const theme = storedTheme || (prefersDark ? 'dark' : 'light');
   document.documentElement.classList.add(theme);
 
-  function toggleTheme() {
-    const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    document.documentElement.classList.remove(currentTheme);
-    document.documentElement.classList.add(newTheme);
-    localStorage.setItem('theme', newTheme);
-  }
+  window.toggleTheme = function toggleTheme() {
+    const root = document.documentElement;
+    const currentTheme = root.classList.contains('dark') ? 'dark' : 'light';
+    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    root.classList.remove(currentTheme);
+    root.classList.add(nextTheme);
+    localStorage.setItem('theme', nextTheme);
+    const toggles = document.querySelectorAll('[data-theme-toggle]');
+    toggles.forEach((toggle) => toggle.setAttribute('aria-pressed', nextTheme === 'dark'));
+  };
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const mobileToggle = document.querySelector('[data-mobile-nav]');
+    const mobileMenu = document.querySelector('[data-mobile-menu]');
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+        mobileToggle.setAttribute('aria-expanded', (!expanded).toString());
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
 `;
 
-export const Layout: FC<LayoutProps> = ({ lang, title, children }) => {
-  const langDetails = languages[lang as Language];
+export const Layout: FC<LayoutProps> = ({ lang, title, active, children }) => {
+  const langDetails = languages[lang];
+  const isRTL = langDetails.dir === 'rtl';
+  const navItems = [
+    { key: 'home' as const, href: `/${lang}`, label: t(lang, 'navHome') },
+    { key: 'services' as const, href: `/${lang}/services`, label: t(lang, 'navServices') },
+    { key: 'caseStudies' as const, href: `/${lang}/case-studies`, label: t(lang, 'navCaseStudies') },
+    { key: 'pricing' as const, href: `/${lang}/pricing`, label: t(lang, 'navPricing') },
+    { key: 'blog' as const, href: `/${lang}/blog`, label: t(lang, 'navBlog') },
+    { key: 'faq' as const, href: `/${lang}/faq`, label: t(lang, 'navFaq') },
+    { key: 'contact' as const, href: `/${lang}/contact`, label: t(lang, 'navContact') },
+  ];
 
   return (
-    <html lang={langDetails.code} dir={langDetails.dir}>
+    <html lang={langDetails.code} dir={langDetails.dir} class="scroll-smooth">
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Vazirmatn:wght@400;600;700;800&display=swap"
+          rel="stylesheet"
+        />
         <link href="/static/style.css" rel="stylesheet" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans">
-        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 top-0 left-0 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 p-4">
+      <body class="min-h-screen bg-surface-light dark:bg-midnight text-gray-900 dark:text-gray-100 font-sans antialiased">
+        <a
+          href="#main-content"
+          class="sr-only focus:not-sr-only focus:absolute focus:z-50 top-0 inset-inline-start-0 rounded-b-md bg-white/90 dark:bg-surface-muted px-4 py-2 text-sm font-semibold text-brand-600"
+        >
           {t(lang, 'skipToContent')}
         </a>
-
-        <header class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
-          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-              <a href={`/${lang}`} class="text-2xl font-bold text-gray-900 dark:text-white">
-                SEO Agency
-              </a>
-              <nav class="hidden md:flex items-center space-x-8">
-                <a href={`/${lang}/services`} class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-                  {t(lang, 'navServices')}
-                </a>
-                <a href={`/${lang}/pricing`} class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-                  {t(lang, 'navPricing')}
-                </a>
-                <a href={`/${lang}/blog`} class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-                  {t(lang, 'navBlog')}
-                </a>
-                <a href={`/${lang}/contact`} class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-                  {t(lang, 'navContact')}
-                </a>
-              </nav>
-              <div class="flex items-center space-x-4">
-                <div class="language-switcher flex items-center space-x-2">
-                  {Object.values(languages).map((l) => (
-                    <a
-                      href={`/${l.code}`}
-                      class={`px-3 py-1 text-sm rounded-md ${l.code === lang ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200'}`}
+        <div class="relative overflow-hidden">
+          <div class="absolute inset-0 -z-10 hidden lg:block">
+            <div class="absolute inset-y-0 inset-inline-end-0 w-[40%] bg-hero-grid opacity-60 dark:opacity-80 blur-3xl" />
+          </div>
+          <header class="sticky top-0 z-50 border-b border-white/10 bg-white/80 backdrop-blur-xl transition dark:border-white/5 dark:bg-midnight/80">
+            <div class="container">
+              <div class={`flex items-center justify-between py-4 ${isRTL ? 'md:flex-row-reverse' : ''}`}>
+                <a href={`/${lang}`} class="flex items-center gap-3 text-lg font-display tracking-tight text-brand-700 dark:text-white">
+                  <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-glass">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      class="h-6 w-6"
                     >
-                      {l.name}
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M4.5 4.5h15v4.125c0 2.072-1.68 3.75-3.75 3.75h-7.5A3.75 3.75 0 0 0 4.5 8.625V4.5Zm0 15v-4.125c0-2.071 1.68-3.75 3.75-3.75h7.5a3.75 3.75 0 0 1 3.75 3.75V19.5h-15Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-xl font-bold leading-tight">
+                    <span class="block text-gray-900 dark:text-gray-50">Quantum</span>
+                    <span class="block text-sm font-semibold uppercase tracking-[0.3em] text-brand-500 dark:text-accent-300">
+                      SEO Labs
+                    </span>
+                  </span>
+                </a>
+                <nav class="hidden lg:flex items-center gap-6 font-medium text-sm">
+                  {navItems.map((item) => (
+                    <a
+                      key={item.key}
+                      href={item.href}
+                      class={`relative inline-flex items-center gap-2 rounded-full px-4 py-2 transition-all duration-300 ease-in-expo ${
+                        active === item.key
+                          ? 'bg-brand-600/10 text-brand-700 shadow-soft dark:bg-brand-500/20 dark:text-white'
+                          : 'text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-white'
+                      }`}
+                    >
+                      <span>{item.label}</span>
+                      {active === item.key && (
+                        <span class="absolute inset-x-1 -bottom-1 h-0.5 rounded-full bg-gradient-to-r from-brand-400 via-accent-400 to-brand-600" />
+                      )}
                     </a>
                   ))}
+                </nav>
+                <div class={`flex items-center gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <div class="flex items-center gap-2 rounded-full bg-white/70 px-2 py-1 shadow-inner dark:bg-surface-muted/80">
+                    {Object.values(languages).map((l) => (
+                      <a
+                        key={l.code}
+                        href={`/${l.code}`}
+                        class={`rounded-full px-3 py-1 text-xs font-semibold transition ${
+                          l.code === lang
+                            ? 'bg-brand-600 text-white shadow-neon'
+                            : 'text-gray-500 hover:text-brand-600 dark:text-gray-300 dark:hover:text-accent-200'
+                        }`}
+                      >
+                        {l.name}
+                      </a>
+                    ))}
+                  </div>
+                  <button
+                    type="button"
+                    class="relative flex h-11 w-11 items-center justify-center rounded-xl border border-white/40 bg-white/70 text-brand-600 shadow-soft transition hover:-translate-y-0.5 hover:shadow-glass dark:border-white/10 dark:bg-surface-muted"
+                    onclick="toggleTheme()"
+                    aria-label="Toggle theme"
+                    aria-pressed="false"
+                    data-theme-toggle
+                  >
+                    <svg
+                      class="h-5 w-5 text-brand-600 dark:hidden"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773-1.591-1.591M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                      />
+                    </svg>
+                    <svg
+                      class="hidden h-5 w-5 text-accent-200 dark:block"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M21.752 15.002A9.718 9.718 0 0 1 12.004 21.75 9.75 9.75 0 0 1 9 2.364c.648-.18 1.207.454.998 1.09a7.5 7.5 0 0 0 9.548 9.548c.636-.21 1.27.35 1.09.998Z" />
+                    </svg>
+                  </button>
+                  <a
+                    href={`/${lang}/contact`}
+                    class="hidden lg:inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-brand-500 via-brand-400 to-accent-400 px-5 py-2 text-sm font-semibold text-white shadow-neon transition hover:-translate-y-1"
+                  >
+                    {t(lang, 'headerCTA')}
+                  </a>
+                  <button
+                    class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-brand-200/60 text-brand-600 transition hover:bg-brand-500/10 dark:border-white/10 dark:text-white lg:hidden"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    data-mobile-nav
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                  </button>
                 </div>
-                <button
-                  class="theme-switcher p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-                  onclick="toggleTheme()"
-                  aria-label="Toggle theme"
-                >
-                  <svg class="h-6 w-6 hidden dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.59a.75.75 0 11-1.06-1.06l1.59-1.591a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.803 17.803a.75.75 0 01-1.06 0l-1.59-1.591a.75.75 0 111.06-1.06l1.59 1.59a.75.75 0 010 1.06zM12 18a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM5.197 17.803a.75.75 0 010-1.06l1.59-1.59a.75.75 0 111.06 1.06l-1.59 1.59a.75.75 0 01-1.06 0zM3 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3.75A.75.75 0 013 12zM6.106 5.197a.75.75 0 011.06 0l1.59 1.591a.75.75 0 11-1.06 1.06l-1.59-1.59a.75.75 0 010-1.06z"/></svg>
-                  <svg class="h-6 w-6 block dark:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.941a.75.75 0 01.981.635A11.25 11.25 0 0118 21a11.25 11.25 0 01-11.25-11.25 11.25 11.25 0 011.718-6.528z" clip-rule="evenodd" /></svg>
-                </button>
-                <a href={`/${lang}/contact`} class="px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700">
-                  {t(lang, 'ctaButton')}
-                </a>
+              </div>
+              <div class="lg:hidden" data-mobile-menu hidden>
+                <div class="mt-4 rounded-2xl border border-brand-100/60 bg-white/90 p-4 shadow-soft dark:border-white/10 dark:bg-surface-muted/90">
+                  <nav class="flex flex-col gap-2">
+                    {navItems.map((item) => (
+                      <a
+                        key={item.key}
+                        href={item.href}
+                        class={`rounded-xl px-4 py-3 text-sm font-semibold transition ${
+                          active === item.key
+                            ? 'bg-brand-600/10 text-brand-700 dark:bg-brand-500/20 dark:text-white'
+                            : 'text-gray-600 hover:bg-brand-500/10 hover:text-brand-700 dark:text-gray-200 dark:hover:text-white'
+                        }`}
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </nav>
+                  <a
+                    href={`/${lang}/contact`}
+                    class="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-brand-500 to-accent-400 px-4 py-3 text-sm font-semibold text-white shadow-neon"
+                  >
+                    {t(lang, 'headerCTA')}
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </header>
-
-        <main id="main-content" class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {children}
-        </main>
-
-        <footer class="bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                <div class="flex justify-between items-center">
-                    <div class="footer-links flex space-x-4">
-                        <a href={`/${lang}/about`} class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">{t(lang, 'footerAbout')}</a>
-                        <a href={`/${lang}/privacy`} class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">{t(lang, 'footerPrivacy')}</a>
-                        <a href={`/${lang}/terms`} class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">{t(lang, 'footerTerms')}</a>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-300">
-                        &copy; {new Date().getFullYear()} SEO Agency. {t(lang, 'footerRights')}
-                    </p>
-                </div>
+          </header>
+          <main id="main-content" class="relative">
+            <div class="container py-12 lg:py-16">
+              {children}
             </div>
-        </footer>
+          </main>
+          <footer class="relative overflow-hidden border-t border-white/10 bg-white/70 backdrop-blur-xl dark:border-white/10 dark:bg-surface-muted/80">
+            <div class="absolute inset-0 -z-10 bg-mesh-light opacity-80 dark:bg-mesh-dark" />
+            <div class="container py-12 lg:py-16">
+              <div class={`grid gap-10 lg:grid-cols-[1.2fr_1fr_1fr] ${isRTL ? 'lg:text-right' : ''}`}>
+                <div class="max-w-xl">
+                  <h3 class="font-display text-2xl font-bold text-gray-900 dark:text-white">{t(lang, 'footerHeading')}</h3>
+                  <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">{t(lang, 'footerTagline')}</p>
+                  <a
+                    href={`/${lang}/contact`}
+                    class="mt-6 inline-flex items-center justify-center rounded-2xl bg-gray-900 px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-700 dark:bg-brand-500"
+                  >
+                    {t(lang, 'footerCTA')}
+                  </a>
+                </div>
+                <div class={`grid gap-6 text-sm text-gray-600 dark:text-gray-300 ${isRTL ? 'lg:justify-items-end' : ''}`}>
+                  <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">{t(lang, 'footerNavigation')}</h4>
+                    <ul class="mt-4 space-y-2">
+                      {navItems.map((item) => (
+                        <li key={item.key}>
+                          <a class="transition hover:text-brand-600 dark:hover:text-accent-200" href={item.href}>
+                            {item.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div class={`text-sm text-gray-600 dark:text-gray-300 ${isRTL ? 'lg:text-right' : ''}`}>
+                  <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">{t(lang, 'footerContact')}</h4>
+                  <ul class="mt-4 space-y-2">
+                    <li>
+                      <a href="mailto:hello@quantumseo.agency" class="transition hover:text-brand-600 dark:hover:text-accent-200">
+                        hello@quantumseo.agency
+                      </a>
+                    </li>
+                    <li>
+                      <span class="text-gray-500 dark:text-gray-400">{t(lang, 'footerPhone')}</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-500 dark:text-gray-400">
+                      <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand-600/10 text-brand-600 dark:text-accent-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 7.5l9.294 5.796a.75.75 0 0 0 .912 0L21.75 7.5M4.5 18.75h15a1.5 1.5 0 0 0 1.5-1.5V6.75a1.5 1.5 0 0 0-1.5-1.5h-15a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5Z" />
+                        </svg>
+                      </span>
+                      <div>
+                        <p>enterprise@quantumseo.agency</p>
+                        <p class="text-xs">{t(lang, 'footerEnterpriseDesk')}</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-10 flex flex-col gap-4 border-t border-white/20 pt-6 text-xs text-gray-500 dark:text-gray-400 lg:flex-row lg:items-center lg:justify-between">
+                <p>&copy; {new Date().getFullYear()} Quantum SEO Labs. {t(lang, 'footerRights')}</p>
+                <div class="flex flex-wrap items-center gap-4">
+                  <a href={`/${lang}/privacy`} class="transition hover:text-brand-600 dark:hover:text-accent-200">
+                    {t(lang, 'footerPrivacy')}
+                  </a>
+                  <a href={`/${lang}/terms`} class="transition hover:text-brand-600 dark:hover:text-accent-200">
+                    {t(lang, 'footerTerms')}
+                  </a>
+                  <a href={`/${lang}/about`} class="transition hover:text-brand-600 dark:hover:text-accent-200">
+                    {t(lang, 'footerAbout')}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
       </body>
     </html>
   );

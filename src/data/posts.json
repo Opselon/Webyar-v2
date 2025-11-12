@@ -7,21 +7,22 @@
       "date": "2023-10-26",
       "readTime": 8,
       "category": "technical",
+      "coverImage": "https://images.unsplash.com/photo-1526481280695-3c46967fe81b?auto=format&fit=crop&w=1200&q=80",
       "translations": {
         "fa": {
           "title": "درک Core Web Vitals",
           "excerpt": "راهنمای جامع برای درک و بهینه‌سازی Core Web Vitals برای بهبود تجربه کاربری و رتبه سئو.",
-          "content": "<h1>درک Core Web Vitals</h1><p>این محتوای کامل پست وبلاگ است...</p>"
+          "content": "<h2>چرا Core Web Vitals اهمیت دارد؟</h2><p>این محتوای کامل پست وبلاگ است...</p>"
         },
         "en": {
           "title": "Understanding Core Web Vitals",
-          "excerpt": "A comprehensive guide to understanding and optimizing Core Web Vitals for better user experience and SEO rankings.",
-          "content": "<h1>Understanding Core Web Vitals</h1><p>This is the full content of the blog post...</p>"
+          "excerpt": "A comprehensive guide to understanding and optimising Core Web Vitals for better UX and rankings.",
+          "content": "<h2>Why Core Web Vitals Matter</h2><p>This is the full content of the blog post...</p>"
         },
         "ar": {
           "title": "فهم مؤشرات الويب الأساسية",
           "excerpt": "دليل شامل لفهم وتحسين مؤشرات الويب الأساسية لتحسين تجربة المستخدم وتصنيفات السيو.",
-          "content": "<h1>فهم مؤشرات الويب الأساسية</h1><p>هذا هو المحتوى الكامل لمنشور المدونة ...</p>"
+          "content": "<h2>لماذا تعد مؤشرات الويب الأساسية مهمة؟</h2><p>هذا هو المحتوى الكامل لمنشور المدونة...</p>"
         }
       }
     },
@@ -32,21 +33,48 @@
       "date": "2023-11-05",
       "readTime": 12,
       "category": "strategy",
+      "coverImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
       "translations": {
         "fa": {
           "title": "استراتژی سئوی بین‌المللی",
           "excerpt": "چگونه وب‌سایت خود را برای مخاطبان جهانی بهینه کنیم و در چندین زبان رتبه بگیریم.",
-          "content": "<h1>استراتژی سئوی بین‌المللی</h1><p>این محتوای کامل پست وبلاگ است...</p>"
+          "content": "<h2>چارچوب سئوی بین‌المللی</h2><p>این محتوای کامل پست وبلاگ است...</p>"
         },
         "en": {
           "title": "International SEO Strategy",
-          "excerpt": "How to optimize your website for a global audience and rank in multiple languages.",
-          "content": "<h1>International SEO Strategy</h1><p>This is the full content of the blog post...</p>"
+          "excerpt": "How to optimise your website for a global audience and rank in multiple languages.",
+          "content": "<h2>The International SEO Framework</h2><p>This is the full content of the blog post...</p>"
         },
         "ar": {
           "title": "استراتيجية السيو الدولية",
           "excerpt": "كيفية تحسين موقع الويب الخاص بك لجمهور عالمي والحصول على ترتيب في لغات متعددة.",
-          "content": "<h1>استراتيجية السيو الدولية</h1><p>هذا هو المحتوى الكامل لمنشور المدونة ...</p>"
+          "content": "<h2>إطار عمل السيو الدولي</h2><p>هذا هو المحتوى الكامل لمنشور المدونة...</p>"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "slug": "executive-seo-dashboard",
+      "author": "Layla Rahimi",
+      "date": "2024-01-14",
+      "readTime": 6,
+      "category": "analytics",
+      "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+      "translations": {
+        "fa": {
+          "title": "داشبورد اجرایی سئو",
+          "excerpt": "یک داشبورد مدیریتی چه KPIهایی باید داشته باشد تا تصمیم‌گیری سریع امکان‌پذیر شود؟",
+          "content": "<h2>اجزای داشبورد ایده‌آل</h2><p>این محتوای کامل پست وبلاگ است...</p>"
+        },
+        "en": {
+          "title": "Designing the Executive SEO Dashboard",
+          "excerpt": "Which KPIs matter most to leadership and how do you build a real-time SEO control centre?",
+          "content": "<h2>Components of a Modern Dashboard</h2><p>This is the full content of the blog post...</p>"
+        },
+        "ar": {
+          "title": "لوحة القيادة التنفيذية للسيو",
+          "excerpt": "ما أهم مؤشرات الأداء التي يحتاجها المدراء وكيف تبني مركز تحكم لحظي؟",
+          "content": "<h2>مكونات لوحة القيادة الحديثة</h2><p>هذا هو المحتوى الكامل لمنشور المدونة...</p>"
         }
       }
     }

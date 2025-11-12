@@ -10,6 +10,7 @@ import { BlogPostPage } from './templates/pages/BlogPost';
 import { CaseStudiesPage } from './templates/pages/CaseStudies';
 import { CaseStudyDetailPage } from './templates/pages/CaseStudyDetail';
 import { ContactPage } from './templates/pages/Contact';
+import { FAQPage } from './templates/pages/FAQ';
 import staticApp from './static';
 
 const app = new Hono();
@@ -66,6 +67,11 @@ app.get('/:lang/case-studies/:slug', (c) => {
     const lang = c.req.param('lang') as Language;
     const slug = c.req.param('slug');
     return c.html(<CaseStudyDetailPage lang={lang} slug={slug} />);
+});
+
+app.get('/:lang/faq', (c) => {
+  const lang = c.req.param('lang') as Language;
+  return c.html(<FAQPage lang={lang} />);
 });
 
 app.get('/:lang/contact', (c) => {
