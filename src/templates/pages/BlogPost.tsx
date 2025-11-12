@@ -24,7 +24,13 @@ export const BlogPostPage: FC<BlogPostProps> = ({ lang, slug }) => {
   const related = postsData.posts.filter((p) => p.slug !== slug).slice(0, 2);
 
   return (
-    <Layout lang={lang} title={content.title} active="blog">
+    <Layout
+      lang={lang}
+      title={content.title}
+      description={content.excerpt}
+      canonical={`https://seo.webyar.cloud/${lang}/blog/${slug}`}
+      active="blog"
+    >
       <article class={`mx-auto max-w-5xl space-y-12 ${isRTL ? 'text-right' : 'text-left'}`}>
         <header class="space-y-6">
           <div class="space-y-3">

@@ -202,13 +202,15 @@ const serviceTabsScript = `
 
 export const ServicesPage: FC<ServicesProps> = ({ lang }) => {
   const title = t(lang, 'servicesPageTitle');
+  const description = t(lang, 'servicesPageDescription');
+  const canonical = `https://seo.webyar.cloud/${lang}/services`;
   const locale = serviceNarrative[lang];
   const isRTL = languages[lang].dir === 'rtl';
   const services = servicesData.services;
   const defaultServiceId = services[0]?.id;
 
   return (
-    <Layout lang={lang} title={title} active="services">
+    <Layout lang={lang} title={title} description={description} canonical={canonical} active="services">
       <section class="space-y-10">
         <SectionHeader eyebrow={locale.eyebrow} title={locale.introTitle} description={locale.introDescription} align="start" />
         <Card variant="glass" interactive={false} className="flex flex-wrap items-center justify-between gap-4">

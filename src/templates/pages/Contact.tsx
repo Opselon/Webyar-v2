@@ -12,10 +12,12 @@ interface ContactProps {
 
 export const ContactPage: FC<ContactProps> = ({ lang }) => {
   const title = t(lang, 'contactPageTitle');
+  const description = t(lang, 'contactPageDescription');
+  const canonical = `https://seo.webyar.cloud/${lang}/contact`;
   const isRTL = languages[lang].dir === 'rtl';
 
   return (
-    <Layout lang={lang} title={title} active="contact">
+    <Layout lang={lang} title={title} description={description} canonical={canonical} active="contact">
       <section class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
         <Card variant="glass" interactive={false} className="space-y-6">
           <div class="space-y-3">

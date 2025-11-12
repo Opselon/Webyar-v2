@@ -14,12 +14,14 @@ interface PricingProps {
 
 export const PricingPage: FC<PricingProps> = ({ lang }) => {
   const title = t(lang, 'pricingPageTitle');
+  const description = t(lang, 'pricingPageDescription');
+  const canonical = `https://seo.webyar.cloud/${lang}/pricing`;
   const isRTL = languages[lang].dir === 'rtl';
   const shortTermPackages = pricingData.packages.filter((p) => p.type === 'short-term');
   const longTermPackages = pricingData.packages.filter((p) => p.type === 'long-term');
 
   return (
-    <Layout lang={lang} title={title} active="pricing">
+    <Layout lang={lang} title={title} description={description} canonical={canonical} active="pricing">
       <section class="space-y-10">
         <SectionHeader
           eyebrow={t(lang, 'pricingTitle')}

@@ -5,6 +5,8 @@ import { Language, languages, t } from '../utils/i18n';
 interface LayoutProps {
   lang: Language;
   title: string;
+  description: string;
+  canonical: string;
   active?: 'home' | 'services' | 'pricing' | 'blog' | 'caseStudies' | 'faq' | 'contact';
 }
 
@@ -38,7 +40,7 @@ const themeScript = `
   });
 `;
 
-export const Layout: FC<LayoutProps> = ({ lang, title, active, children }) => {
+export const Layout: FC<LayoutProps> = ({ lang, title, description, canonical, active, children }) => {
   const langDetails = languages[lang];
   const isRTL = langDetails.dir === 'rtl';
   const navItems = [
@@ -57,6 +59,11 @@ export const Layout: FC<LayoutProps> = ({ lang, title, active, children }) => {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonical} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
         <link

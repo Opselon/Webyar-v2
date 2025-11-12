@@ -69,13 +69,15 @@ const filtersScript = `
 
 export const CaseStudiesPage: FC<CaseStudiesProps> = ({ lang }) => {
   const title = t(lang, 'caseStudiesPageTitle');
+  const description = t(lang, 'caseStudiesPageDescription');
+  const canonical = `https://seo.webyar.cloud/${lang}/case-studies`;
   const isRTL = languages[lang].dir === 'rtl';
   const caseStudies = caseStudiesData.caseStudies;
   const industries = Array.from(new Set(caseStudies.map((study) => study.industry)));
   const types = Array.from(new Set(caseStudies.map((study) => study.type)));
 
   return (
-    <Layout lang={lang} title={title} active="caseStudies">
+    <Layout lang={lang} title={title} description={description} canonical={canonical} active="caseStudies">
       <section class="space-y-10">
         <SectionHeader
           eyebrow={t(lang, 'caseStudiesTitle')}

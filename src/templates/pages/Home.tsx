@@ -425,6 +425,8 @@ const copy = {
 
 export const HomePage: FC<HomeProps> = ({ lang }) => {
   const title = t(lang, 'homepageTitle');
+  const description = t(lang, 'homepageDescription');
+  const canonical = `https://seo.webyar.cloud/${lang}`;
   const locale = copy[lang];
   const isRTL = languages[lang].dir === 'rtl';
   const services: Service[] = servicesData.services;
@@ -432,7 +434,7 @@ export const HomePage: FC<HomeProps> = ({ lang }) => {
   const latestPosts: Post[] = postsData.posts.slice(0, 3);
 
   return (
-    <Layout lang={lang} title={title} active="home">
+    <Layout lang={lang} title={title} description={description} canonical={canonical} active="home">
       <section class="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-white via-brand-50 to-accent-50 p-8 shadow-soft dark:from-surface-muted dark:via-surface-muted/60 dark:to-midnight">
         <div class={`grid gap-10 lg:grid-cols-[1.1fr_0.9fr] ${isRTL ? 'lg:text-right' : ''}`}>
           <div class="flex flex-col gap-6">

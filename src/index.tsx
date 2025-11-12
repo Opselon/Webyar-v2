@@ -12,6 +12,9 @@ import { CaseStudyDetailPage } from './templates/pages/CaseStudyDetail';
 import { ContactPage } from './templates/pages/Contact';
 import { FAQPage } from './templates/pages/FAQ';
 import staticApp from './static';
+import postsData from './data/posts.json';
+import caseStudiesData from './data/case-studies.json';
+import { languages } from './utils/i18n';
 
 const app = new Hono();
 
@@ -77,6 +80,55 @@ app.get('/:lang/faq', (c) => {
 app.get('/:lang/contact', (c) => {
   const lang = c.req.param('lang') as Language;
   return c.html(<ContactPage lang={lang} />);
+});
+
+app.get('/sitemap.xml', (c) => {
+  const urls = [];
+  const domain = 'https://seo.webyar.cloud';
+
+  for (const lang of Object.keys(languages)) {
+    urls.push(`${domain}/${lang}`);
+    urls.push(`${domain}/${lang}/services`);
+    urls.push(`${domain}/${lang}/pricing`);
+    urls.push(`${domain}/${lang}/blog`);
+    urls.push(`${domain}/${lang}/case-studies`);
+    urls.push(`${domain}/${lang}/faq`);
+    urls.push(`${domain}/${lang}/contact`);
+  }
+
+  for (const post of postsData.posts) {
+    for (const lang of Object.keys(languages)) {
+      urls.push(`${domain}/${lang}/blog/${post.slug}`);
+    }
+  }
+
+  for (const caseStudy of caseStudiesData.caseStudies) {
+    for (const lang of Object.keys(languages)) {
+      urls.push(`${domain}/${lang}/case-studies/${caseStudy.slug}`);
+    }
+  }
+
+  const sitemap = `
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${urls.map((url) => `<url><loc>${url}</loc></url>`).join('')}
+    </urlset>
+  `.trim();
+
+  return c.body(sitemap, 200, {
+    'Content-Type': 'application/xml',
+  });
+});
+
+app.get('/robots.txt', (c) => {
+  const robots = `
+User-agent: *
+Disallow:
+
+Sitemap: https://seo.webyar.cloud/sitemap.xml
+  `.trim();
+  return c.body(robots, 200, {
+    'Content-Type': 'text/plain',
+  });
 });
 
 export default app;
