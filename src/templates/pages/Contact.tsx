@@ -449,6 +449,59 @@ export const ContactPage: FC<ContactProps> = ({ lang }) => {
                 </form>
               </div>
             </div>
+            <div role="status" aria-live="polite" class="text-xs text-accent-500"></div>
+          </form>
+        </Card>
+        <Card variant="solid" interactive={false} className="space-y-6">
+          <h2 class="font-display text-2xl font-semibold text-gray-900 dark:text-white">
+            {lang === 'en' ? 'What happens next?' : lang === 'fa' ? 'گام بعد چیست؟' : 'ما الخطوات التالية؟'}
+          </h2>
+          <ol class={`space-y-4 text-sm text-gray-600 dark:text-gray-300 ${isRTL ? 'text-right' : ''}`}>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-brand-500/15 font-semibold text-brand-600 dark:text-accent-200">1</span>
+              <span>
+                {lang === 'en'
+                  ? 'Discovery call to align on objectives, stakeholders, and timelines.'
+                  : lang === 'fa'
+                  ? 'تماس Discovery برای همسویی اهداف، ذی‌نفعان و زمان‌بندی.'
+                  : 'جلسة استكشافية لمواءمة الأهداف وأصحاب المصلحة والجداول الزمنية.'}
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-brand-500/15 font-semibold text-brand-600 dark:text-accent-200">2</span>
+              <span>
+                {lang === 'en'
+                  ? 'We deliver a tailored roadmap with technical, content, and market workstreams.'
+                  : lang === 'fa'
+                  ? 'نقشه راهی اختصاصی شامل جریان‌های تکنیکال، محتوا و بازار ارائه می‌دهیم.'
+                  : 'نقدم خارطة طريق مخصصة تشمل المسارات التقنية والمحتوى والسوق.'}
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-brand-500/15 font-semibold text-brand-600 dark:text-accent-200">3</span>
+              <span>
+                {lang === 'en'
+                  ? 'Kickoff with shared dashboards, comms channels, and experiment backlog.'
+                  : lang === 'fa'
+                  ? 'شروع همکاری با داشبورد مشترک، کانال‌های ارتباطی و بک‌لاگ تست.'
+                  : 'الانطلاق مع لوحات تحكم مشتركة وقنوات تواصل وقائمة اختبارات.'}
+              </span>
+            </li>
+          </ol>
+          <div class="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+            <h3 class="font-semibold text-gray-900 dark:text-white">
+              {lang === 'en' ? 'Enterprise support desk' : lang === 'fa' ? 'میز پشتیبانی سازمانی' : 'مكتب دعم المؤسسات'}
+            </h3>
+            <p>
+              {lang === 'en'
+                ? 'Need to onboard legal, procurement, or security? We provide compliance packs, DPAs, and SOC II documentation.'
+                : lang === 'fa'
+                ? 'برای تطبیق حقوقی، خرید یا امنیت نیاز دارید؟ بسته‌های کامپلاینس، DPA و مستندات SOC II ارائه می‌کنیم.'
+                : 'هل تحتاج إلى إشراك فرق القانون أو المشتريات أو الأمن؟ نوفر حزم الامتثال واتفاقيات حماية البيانات ووثائق SOC II.'}
+            </p>
+            <a href="mailto:opcelon@gmail.com" class="font-semibold text-brand-600 transition hover:text-brand-800 dark:text-accent-200 dark:hover:text-white" dir="ltr">
+              opcelon@gmail.com
+            </a>
           </div>
         </div>
       </section>
