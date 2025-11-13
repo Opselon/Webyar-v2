@@ -194,7 +194,7 @@ export const Layout: FC<LayoutProps> = ({ lang, title, description, canonical, a
                   </button>
                 </div>
               </div>
-              <div class="lg:hidden" data-mobile-menu hidden>
+              <div class="lg:hidden hidden" data-mobile-menu>
                 <div class="mt-4 rounded-2xl border border-brand-100/60 bg-white/90 p-4 shadow-soft dark:border-white/10 dark:bg-surface-muted/90">
                   <nav class="flex flex-col gap-2">
                     {navItems.map((item) => (
@@ -258,12 +258,18 @@ export const Layout: FC<LayoutProps> = ({ lang, title, description, canonical, a
                   <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">{t(lang, 'footerContact')}</h4>
                   <ul class="mt-4 space-y-2">
                     <li>
-                      <a href="mailto:hello@quantumseo.agency" class="transition hover:text-brand-600 dark:hover:text-accent-200">
-                        hello@quantumseo.agency
+                      <a href="mailto:opcelon@gmail.com" class="transition hover:text-brand-600 dark:hover:text-accent-200">
+                        opcelon@gmail.com
                       </a>
                     </li>
                     <li>
-                      <span class="text-gray-500 dark:text-gray-400">{t(lang, 'footerPhone')}</span>
+                      <a
+                        href="tel:09016807808"
+                        dir="ltr"
+                        class={`transition hover:text-brand-600 dark:hover:text-accent-200 ${isRTL ? 'inline-flex justify-end' : ''}`}
+                      >
+                        {t(lang, 'footerPhone')}
+                      </a>
                     </li>
                     <li class="flex items-center gap-3 text-gray-500 dark:text-gray-400">
                       <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand-600/10 text-brand-600 dark:text-accent-200">
@@ -272,7 +278,7 @@ export const Layout: FC<LayoutProps> = ({ lang, title, description, canonical, a
                         </svg>
                       </span>
                       <div>
-                        <p>enterprise@quantumseo.agency</p>
+                        <p dir="ltr">opcelon@gmail.com</p>
                         <p class="text-xs">{t(lang, 'footerEnterpriseDesk')}</p>
                       </div>
                     </li>

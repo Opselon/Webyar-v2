@@ -43,7 +43,7 @@ export const translations = {
     footerCTA: 'شروع همکاری',
     footerNavigation: 'مسیرهای کلیدی',
     footerContact: 'تماس با تیم',
-    footerPhone: '+98 21 8888 0000',
+    footerPhone: '09016807808',
     footerEnterpriseDesk: 'میز پشتیبانی مشتریان سازمانی',
     footerAbout: 'درباره ما',
     footerPrivacy: 'حریم خصوصی',
@@ -97,6 +97,10 @@ export const translations = {
     formWebsite: 'وب‌سایت',
     formMessage: 'پیام شما',
     formSubmit: 'ارسال',
+    contactSubmitting: 'در حال ارسال...',
+    contactSuccess: 'درخواست شما با موفقیت ارسال شد.',
+    contactError: 'ارسال فرم با خطا مواجه شد. لطفاً دوباره تلاش کنید.',
+    contactValidationError: 'لطفاً نام، ایمیل و پیام را تکمیل کنید.',
   },
   en: {
     // General
@@ -120,7 +124,7 @@ export const translations = {
     footerCTA: 'Start a partnership',
     footerNavigation: 'Key journeys',
     footerContact: 'Talk to us',
-    footerPhone: '+44 20 3000 1200',
+    footerPhone: '09016807808',
     footerEnterpriseDesk: 'Enterprise success desk',
     footerAbout: 'About Us',
     footerPrivacy: 'Privacy Policy',
@@ -174,6 +178,10 @@ export const translations = {
     formWebsite: 'Website',
     formMessage: 'Your Message',
     formSubmit: 'Submit',
+    contactSubmitting: 'Sending...',
+    contactSuccess: 'Thanks! Your message has been sent.',
+    contactError: 'Something went wrong. Please try again shortly.',
+    contactValidationError: 'Please provide your name, email, and a message.',
   },
   ar: {
     // General
@@ -197,7 +205,7 @@ export const translations = {
     footerCTA: 'ابدأ الشراكة',
     footerNavigation: 'روابط أساسية',
     footerContact: 'تواصل معنا',
-    footerPhone: '+971 4 555 2100',
+    footerPhone: '09016807808',
     footerEnterpriseDesk: 'مكتب دعم المؤسسات',
     footerAbout: 'معلومات عنا',
     footerPrivacy: 'سياسة الخصوصية',
@@ -251,6 +259,10 @@ export const translations = {
     formWebsite: 'الموقع الإلكتروني',
     formMessage: 'رسالتك',
     formSubmit: 'إرسال',
+    contactSubmitting: 'جارٍ الإرسال...',
+    contactSuccess: 'شكرًا لك! تم إرسال رسالتك بنجاح.',
+    contactError: 'حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.',
+    contactValidationError: 'يرجى إدخال الاسم والبريد الإلكتروني والرسالة.',
   },
 };
 
