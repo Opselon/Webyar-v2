@@ -1,18 +1,202 @@
 {
   "packages": [
     {
+      "id": "analytics-foundation",
+      "type": "short-term",
+      "duration": 1,
+      "billing": "project",
+      "price": 300,
+      "currency": "USD",
+      "translations": {
+        "fa": {
+          "title": "Analytics & Tracking Setup",
+          "description": "راه‌اندازی اصولی آنالیتیکس، تگ‌منیجر و رویدادها برای گزارش‌گیری دقیق سئو و مارکتینگ.",
+          "badge": "۱ ماهه",
+          "priceLabel": "شروع از ۱۵٬۰۰۰٬۰۰۰ ریال (حدود ۳۰۰ دلار)",
+          "features": [
+            "طراحی مدل داده و تعریف Event و Conversion",
+            "پیاده‌سازی Google Tag Manager و Google Analytics",
+            "مستندسازی نام‌گذاری و Data Layer",
+            "ساخت داشبورد پایه گزارش‌گیری سئو و قیف"
+          ]
+        },
+        "en": {
+          "title": "Analytics & Tracking Setup",
+          "description": "A focused implementation sprint to fix tracking, events, and SEO reporting foundations.",
+          "badge": "1 Month",
+          "priceLabel": "Starting at $300",
+          "features": [
+            "Tracking and conversion taxonomy design",
+            "Google Tag Manager & analytics implementation",
+            "Data layer and naming conventions documentation",
+            "Baseline SEO & funnel reporting dashboard"
+          ]
+        },
+        "ar": {
+          "title": "إعداد التحليلات والتتبع",
+          "description": "سباق مركز لإصلاح التتبع والأحداث وبناء أساس تقارير السيو.",
+          "badge": "شهر واحد",
+          "priceLabel": "يبدأ من 300 دولار",
+          "features": [
+            "تصميم نموذج التتبع والتحويلات",
+            "تنفيذ Google Tag Manager والتحليلات",
+            "توثيق طبقة البيانات وقواعد التسمية",
+            "إنشاء لوحة تقارير أساسية للسيو والقمع التسويقي"
+          ]
+        }
+      }
+    },
+    {
+      "id": "local-seo-sprint",
+      "type": "short-term",
+      "duration": 3,
+      "billing": "project",
+      "price": 350,
+      "currency": "USD",
+      "translations": {
+        "fa": {
+          "title": "Local SEO Sprint",
+          "description": "تمرکز روی حضور محلی: Google Business Profile، لوکیشن‌ها، ریویوها و لوکال لینک‌ها.",
+          "badge": "۳–۴ هفته",
+          "priceLabel": "شروع از ۱۷٬۵۰۰٬۰۰۰ ریال (حدود ۳۵۰ دلار)",
+          "features": [
+            "بهینه‌سازی کامل Google Business Profile",
+            "ساخت و بهبود صفحات لوکال لندینگ",
+            "طراحی استراتژی ریویو و ریتینگ",
+            "شناسایی و اجرای تاکتیک‌های لینک‌سازی محلی"
+          ]
+        },
+        "en": {
+          "title": "Local SEO Sprint",
+          "description": "A focused engagement to strengthen local visibility, listings, and review signals.",
+          "badge": "3–4 Weeks",
+          "priceLabel": "Starting at $350",
+          "features": [
+            "Full Google Business Profile optimisation",
+            "Local landing page design and optimisation",
+            "Review and rating generation playbook",
+            "Tactical local link and citation acquisition"
+          ]
+        },
+        "ar": {
+          "title": "سباق السيو المحلي",
+          "description": "تعاون مركز لتعزيز الظهور المحلي، والملفات التجارية، والتقييمات.",
+          "badge": "3–4 أسابيع",
+          "priceLabel": "يبدأ من 350 دولار",
+          "features": [
+            "تحسين شامل لملف Google Business",
+            "إنشاء وتحسين صفحات الهبوط المحلية",
+            "خطة عملية للحصول على التقييمات والمراجعات",
+            "اكتساب الروابط المحلية والإشارات (Citations)"
+          ]
+        }
+      }
+    },
+    {
+      "id": "startup-retainer",
+      "type": "long-term",
+      "duration": 3,
+      "billing": "monthly",
+      "price": 400,
+      "currency": "USD",
+      "translations": {
+        "fa": {
+          "title": "Startup SEO Retainer",
+          "description": "پلن چابک مخصوص استارتاپ‌ها برای رسیدن به Product–Channel Fit در سئو.",
+          "badge": "استارتاپ",
+          "priceLabel": "۲۰٬۰۰۰٬۰۰۰ ریال در ماه (حدود ۴۰۰ دلار)",
+          "features": [
+            "اولویت‌بندی سریع فرصت‌های Growth در سئو",
+            "آزمایش سریع لندینگ‌ها و پیشنهاد ارزش",
+            "هماهنگی نزدیک با تیم Product و مارکتینگ",
+            "گزارش دو‌هفته‌یک‌بار و Backlog اجرایی"
+          ]
+        },
+        "en": {
+          "title": "Startup SEO Retainer",
+          "description": "A lean three-month retainer to find and scale product–channel fit in organic search.",
+          "badge": "Startup",
+          "priceLabel": "$400 / month",
+          "features": [
+            "Fast prioritisation of SEO growth opportunities",
+            "Landing page and value proposition experiments",
+            "Tight collaboration with product & marketing teams",
+            "Bi-weekly reporting and execution backlog"
+          ]
+        },
+        "ar": {
+          "title": "عقد السيو للشركات الناشئة",
+          "description": "عقد مرن لمدة ثلاثة أشهر لإيجاد وتوسيع ملاءمة المنتج مع قناة البحث العضوي.",
+          "badge": "شركات ناشئة",
+          "priceLabel": "400 دولار شهريًا",
+          "features": [
+            "تحديد سريع لفرص النمو في السيو",
+            "تجارب على صفحات الهبوط وعرض القيمة",
+            "تنسيق وثيق مع فرق المنتج والتسويق",
+            "تقارير نصف شهرية وقائمة تنفيذ واضحة"
+          ]
+        }
+      }
+    },
+    {
+      "id": "content-engine-retainer",
+      "type": "long-term",
+      "duration": 6,
+      "billing": "monthly",
+      "price": 550,
+      "currency": "USD",
+      "translations": {
+        "fa": {
+          "title": "Content Engine Retainer",
+          "description": "راه‌اندازی و اجرای موتور محتوای سئو محور با تمرکز بر تحقیق، تولید، و آپدیت هوشمند.",
+          "badge": "محتوامحور",
+          "priceLabel": "۲۷٬۵۰۰٬۰۰۰ ریال در ماه (حدود ۵۵۰ دلار)",
+          "features": [
+            "استراتژی تاپیکال و کلاستر محتوایی",
+            "برنامه تولید ماهانه مقالات و لندینگ‌ها",
+            "به‌روزرسانی و ریفکتور محتواهای فعلی",
+            "مرور ماهانه Performance و Ideation جدید"
+          ]
+        },
+        "en": {
+          "title": "Content Engine Retainer",
+          "description": "Six-month engagement to build and run a search-led content engine.",
+          "badge": "Content-first",
+          "priceLabel": "$550 / month",
+          "features": [
+            "Topical and cluster content strategy",
+            "Monthly production of articles and landings",
+            "Evergreen content refresh and refactor",
+            "Monthly performance review and ideation"
+          ]
+        },
+        "ar": {
+          "title": "عقد محرك المحتوى",
+          "description": "ستة أشهر لبناء وتشغيل محرك محتوى يقوده البحث العضوي.",
+          "badge": "محور المحتوى",
+          "priceLabel": "550 دولار شهريًا",
+          "features": [
+            "استراتيجية موضوعية ومجموعات محتوى",
+            "خطة إنتاج شهرية للمقالات وصفحات الهبوط",
+            "تحديث وتحسين المحتوى الدائم",
+            "مراجعة أداء شهرية وتغذية بخطط أفكار جديدة"
+          ]
+        }
+      }
+    },
+    {
       "id": "kickstart-seo",
       "type": "short-term",
       "duration": 3,
       "billing": "project",
-      "price": 4800,
+      "price": 600,
       "currency": "USD",
       "translations": {
         "fa": {
           "title": "Kickstart SEO Audit",
           "description": "تحلیل ۳۶۰ درجه و اجرای سریع برای تثبیت پایه فنی و محتوایی.",
           "badge": "۳ ماهه",
-          "priceLabel": "شروع از ۴٬۸۰۰ دلار",
+          "priceLabel": "شروع از ۳۰٬۰۰۰٬۰۰۰ ریال (حدود ۶۰۰ دلار)",
           "features": [
             "آدیت تکنیکال ۱۲۰+ نقطه",
             "تحقیق کلمات کلیدی سطح اول",
@@ -24,7 +208,7 @@
           "title": "Kickstart SEO Audit",
           "description": "A 360° diagnostic and rapid implementation to stabilise technical and content foundations.",
           "badge": "3 Months",
-          "priceLabel": "Starting at $4,800",
+          "priceLabel": "Starting at $600",
           "features": [
             "120+ point technical audit",
             "Level-one keyword & entity research",
@@ -36,7 +220,7 @@
           "title": "تدقيق السيو الشامل",
           "description": "تشخيص شامل وتنفيذ سريع لتثبيت الأساس التقني والمحتوائي.",
           "badge": "3 أشهر",
-          "priceLabel": "يبدأ من 4,800 دولار",
+          "priceLabel": "يبدأ من 600 دولار",
           "features": [
             "تدقيق تقني يشمل أكثر من 120 نقطة",
             "بحث الكيانات والكلمات الرئيسية من المستوى الأول",
@@ -47,64 +231,18 @@
       }
     },
     {
-      "id": "onpage-sprint",
-      "type": "short-term",
-      "duration": 4,
-      "billing": "project",
-      "price": 7200,
-      "currency": "USD",
-      "translations": {
-        "fa": {
-          "title": "On-Page Optimization Sprint",
-          "description": "۴ هفته تمرکز کامل بر ساختاردهی محتوا، تست A/B و بهبود نرخ تبدیل.",
-          "badge": "۴ هفته",
-          "priceLabel": "شروع از ۷٬۲۰۰ دلار",
-          "features": [
-            "استراتژی کلاستر محتوا",
-            "طراحی پیام و On-page Copy",
-            "آزمایش A/B در صفحات کلیدی",
-            "گزارش هفتگی و آموزش تیم"
-          ]
-        },
-        "en": {
-          "title": "On-Page Optimisation Sprint",
-          "description": "A four-week intensive to rebuild content architecture, run A/B tests, and uplift conversions.",
-          "badge": "4 Weeks",
-          "priceLabel": "Starting at $7,200",
-          "features": [
-            "Content cluster and messaging strategy",
-            "UX writing & on-page copy refresh",
-            "A/B testing for priority journeys",
-            "Weekly reporting and enablement workshops"
-          ]
-        },
-        "ar": {
-          "title": "سباق التحسين على الصفحة",
-          "description": "أربعة أسابيع مكثفة لإعادة هيكلة المحتوى، وإجراء اختبارات A/B، وزيادة التحويلات.",
-          "badge": "4 أسابيع",
-          "priceLabel": "يبدأ من 7,200 دولار",
-          "features": [
-            "استراتيجية مجموعات المحتوى والرسائل",
-            "كتابة وتجديد المحتوى داخل الصفحة",
-            "اختبارات A/B للرحلات ذات الأولوية",
-            "تقرير أسبوعي وجلسات تمكين للفريق"
-          ]
-        }
-      }
-    },
-    {
       "id": "growth-retainer",
       "type": "long-term",
       "duration": 6,
       "billing": "monthly",
-      "price": 3800,
+      "price": 750,
       "currency": "USD",
       "translations": {
         "fa": {
           "title": "Growth Retainer",
           "description": "همکاری شش‌ماهه برای اجرای مستمر، تحلیل داده و پشتیبانی محصول.",
           "badge": "محبوب",
-          "priceLabel": "۳٬۸۰۰ دلار در ماه",
+          "priceLabel": "۳۷٬۵۰۰٬۰۰۰ ریال در ماه (حدود ۷۵۰ دلار)",
           "features": [
             "۵۰+ ساعت مشاوره و اجرا در ماه",
             "تقویم محتوای چندزبانه",
@@ -116,7 +254,7 @@
           "title": "Growth Retainer",
           "description": "Six months of ongoing execution, intelligence, and cross-team product support.",
           "badge": "Most selected",
-          "priceLabel": "$3,800 / month",
+          "priceLabel": "$750 / month",
           "features": [
             "50+ hours of consulting & implementation monthly",
             "Multilingual content calendar",
@@ -128,7 +266,7 @@
           "title": "عقد النمو",
           "description": "ستة أشهر من التنفيذ المستمر، والتحليلات، ودعم فرق المنتج.",
           "badge": "الأكثر اختيارًا",
-          "priceLabel": "3,800 دولار شهريًا",
+          "priceLabel": "750 دولار شهريًا",
           "features": [
             "أكثر من 50 ساعة استشارة وتنفيذ شهريًا",
             "تقويم محتوى متعدد اللغات",
@@ -139,18 +277,64 @@
       }
     },
     {
+      "id": "onpage-sprint",
+      "type": "short-term",
+      "duration": 4,
+      "billing": "project",
+      "price": 800,
+      "currency": "USD",
+      "translations": {
+        "fa": {
+          "title": "On-Page Optimization Sprint",
+          "description": "۴ هفته تمرکز کامل بر ساختاردهی محتوا، تست A/B و بهبود نرخ تبدیل.",
+          "badge": "۴ هفته",
+          "priceLabel": "شروع از ۴۰٬۰۰۰٬۰۰۰ ریال (حدود ۸۰۰ دلار)",
+          "features": [
+            "استراتژی کلاستر محتوا",
+            "طراحی پیام و On-page Copy",
+            "آزمایش A/B در صفحات کلیدی",
+            "گزارش هفتگی و آموزش تیم"
+          ]
+        },
+        "en": {
+          "title": "On-Page Optimisation Sprint",
+          "description": "A four-week intensive to rebuild content architecture, run A/B tests, and uplift conversions.",
+          "badge": "4 Weeks",
+          "priceLabel": "Starting at $800",
+          "features": [
+            "Content cluster and messaging strategy",
+            "UX writing & on-page copy refresh",
+            "A/B testing for priority journeys",
+            "Weekly reporting and enablement workshops"
+          ]
+        },
+        "ar": {
+          "title": "سباق التحسين على الصفحة",
+          "description": "أربعة أسابيع مكثفة لإعادة هيكلة المحتوى، وإجراء اختبارات A/B، وزيادة التحويلات.",
+          "badge": "4 أسابيع",
+          "priceLabel": "يبدأ من 800 دولار",
+          "features": [
+            "استراتيجية مجموعات المحتوى والرسائل",
+            "كتابة وتجديد المحتوى داخل الصفحة",
+            "اختبارات A/B للرحلات ذات الأولوية",
+            "تقرير أسبوعي وجلسات تمكين للفريق"
+          ]
+        }
+      }
+    },
+    {
       "id": "scale-retainer",
       "type": "long-term",
       "duration": 12,
       "billing": "monthly",
-      "price": 6200,
+      "price": 1200,
       "currency": "USD",
       "translations": {
         "fa": {
           "title": "Scale Retainer",
           "description": "دوازده ماه مقیاس‌پذیری جهانی با اسکواد بین‌المللی، مهندسی داده و مدیریت تغییر.",
           "badge": "انترپرایز",
-          "priceLabel": "۶٬۲۰۰ دلار در ماه",
+          "priceLabel": "۶۰٬۰۰۰٬۰۰۰ ریال در ماه (حدود ۱٬۲۰۰ دلار)",
           "features": [
             "اسکواد SEO + دیتا + محتوا اختصاصی",
             "پودمان‌های International و Localisation",
@@ -162,7 +346,7 @@
           "title": "Scale Retainer",
           "description": "Twelve months to orchestrate global scale with embedded squads, data engineering, and change enablement.",
           "badge": "Enterprise",
-          "priceLabel": "$6,200 / month",
+          "priceLabel": "$1,200 / month",
           "features": [
             "Dedicated SEO + data + content squad",
             "International SEO & localisation modules",
@@ -174,7 +358,7 @@
           "title": "عقد التوسع",
           "description": "اثنا عشر شهرًا للتوسع العالمي عبر فرق مدمجة وهندسة بيانات وإدارة تغيير.",
           "badge": "مؤسسات",
-          "priceLabel": "6,200 دولار شهريًا",
+          "priceLabel": "1,200 دولار شهريًا",
           "features": [
             "فريق مخصص للسيو والبيانات والمحتوى",
             "وحدات السيو الدولي والتوطين",

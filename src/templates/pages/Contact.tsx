@@ -225,6 +225,98 @@ export const ContactPage: FC<ContactProps> = ({ lang }) => {
     })();
   `;
 
+  const contactFormScript = `
+    (() => {
+      const form = document.querySelector('[data-contact-form]');
+      if (!form) return;
+
+      const status = form.querySelector('[data-contact-status]');
+      const submitButton = form.querySelector('button[type="submit"]');
+      const label = submitButton?.querySelector('[data-button-label]');
+      if (!status || !submitButton || !label) return;
+
+      const baseClass = status.dataset.baseClass || status.className;
+      const successMessage = ${JSON.stringify(t(lang, 'contactSuccess'))};
+      const errorMessage = ${JSON.stringify(t(lang, 'contactError'))};
+      const validationMessage = ${JSON.stringify(t(lang, 'contactValidationError'))};
+      const submittingLabel = ${JSON.stringify(t(lang, 'contactSubmitting'))};
+      const defaultLabel = label.textContent || '';
+      const baseNoColor = baseClass
+        .replace(/\btext-gray-500\b/g, '')
+        .replace(/\bdark:text-gray-400\b/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+      const baseForState = baseNoColor.length > 0 ? baseNoColor : baseClass;
+      const mergeClass = (suffix) => {
+        if (!suffix) return baseForState;
+        return baseForState ? (baseForState + ' ' + suffix).trim() : suffix;
+      };
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        status.textContent = '';
+        status.className = baseClass;
+        submitButton.disabled = true;
+        label.textContent = submittingLabel;
+
+        try {
+          const formData = new FormData(form);
+          const payload = {};
+
+          formData.forEach((value, key) => {
+            if (typeof value === 'string') {
+              payload[key] = value;
+            }
+          });
+
+          payload.name = (payload.name || '').trim();
+          payload.email = (payload.email || '').trim();
+          payload.message = (payload.message || '').trim();
+          if (payload.website) payload.website = payload.website.trim();
+          if (payload.language) payload.language = payload.language.trim();
+          if (payload.companySize) payload.companySize = payload.companySize.trim();
+          if (payload.engagement) payload.engagement = payload.engagement.trim();
+
+          if (!payload.name || !payload.email || !payload.message) {
+            status.textContent = validationMessage;
+            status.className = mergeClass('text-rose-600 dark:text-rose-400');
+            return;
+          }
+
+          const response = await fetch(form.getAttribute('action') || window.location.pathname, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json',
+            },
+            body: JSON.stringify(payload),
+          });
+
+          if (!response.ok) {
+            throw new Error('Request failed');
+          }
+
+          const result = await response.json();
+
+          if (!result?.success) {
+            throw new Error('Submission rejected');
+          }
+
+          form.reset();
+          status.textContent = successMessage;
+          status.className = mergeClass('text-brand-600 dark:text-accent-200');
+        } catch (error) {
+          console.error('Contact form submission failed', error);
+          status.textContent = errorMessage;
+          status.className = mergeClass('text-rose-600 dark:text-rose-400');
+        } finally {
+          label.textContent = defaultLabel;
+          submitButton.disabled = false;
+        }
+      });
+    })();
+  `;
+
   return (
     <Layout lang={lang} title={title} description={description} canonical={canonical} active="contact">
       <section class={`py-16 sm:py-20 lg:py-24 ${isRTL ? 'text-right' : 'text-left'}`}>
