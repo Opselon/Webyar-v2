@@ -431,7 +431,10 @@ export const HomePage: FC<HomeProps> = ({ lang }) => {
   const isRTL = languages[lang].dir === 'rtl';
   const services: Service[] = servicesData.services;
   const heroCaseStudies: CaseStudy[] = caseStudiesData.caseStudies.slice(0, 3);
-  const latestPosts: Post[] = postsData.posts.slice(0, 3);
+  const sortedPosts: Post[] = [...postsData.posts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+  const latestPosts: Post[] = sortedPosts.slice(0, 3);
 
   return (
     <Layout lang={lang} title={title} description={description} canonical={canonical} active="home">

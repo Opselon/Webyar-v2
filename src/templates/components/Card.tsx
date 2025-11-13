@@ -3,10 +3,11 @@ import { FC, JSX, PropsWithChildren } from 'hono/jsx';
 
 type CardVariant = 'glass' | 'solid' | 'soft';
 
-interface CardProps extends PropsWithChildren {
+interface CardProps extends PropsWithChildren<JSX.IntrinsicElements['div']> {
   variant?: CardVariant;
   interactive?: boolean;
   className?: string;
+  contentClassName?: string;
   key?: string | number;
 }
 
@@ -21,9 +22,16 @@ export const Card: FC<CardProps> = ({
   variant = 'glass',
   interactive = true,
   className = '',
+  contentClassName,
+  ...rest
 }) => {
+  const innerClassName =
+    contentClassName ??
+    'flex flex-col gap-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300';
+
   return (
     <div
+      {...rest}
       class={`${variantStyles[variant]} relative overflow-hidden rounded-3xl p-6 transition-all duration-500 ${
         interactive ? 'hover:-translate-y-2 hover:shadow-glass' : ''
       } ${className}`}
@@ -31,7 +39,7 @@ export const Card: FC<CardProps> = ({
       <div class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100">
         <div class="absolute inset-y-0 inset-inline-end-0 h-full w-1/3 bg-gradient-to-br from-brand-500/10 to-accent-400/20" />
       </div>
-      <div class="relative z-10 flex flex-col gap-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300">{children}</div>
+      <div class={`relative z-10 ${innerClassName}`}>{children}</div>
     </div>
   );
 };

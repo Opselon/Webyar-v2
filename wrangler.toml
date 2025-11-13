@@ -2,17 +2,17 @@ name = "persian-seo-website"
 main = "src/index.tsx"
 compatibility_date = "2023-10-30"
 
-# Bind a D1 database. This is where your application will store its data.
 [[d1_databases]]
 binding = "SEO_DB"
 database_name = "seo-db"
-database_id = "00000000-0000-0000-0000-000000000000" # Dummy ID for local development
+database_id = "dd7a9720-eb51-406e-a45a-631007e870bc"
 
-# Bind a KV Namespace. This is where you can store key-value data.
 [[kv_namespaces]]
 binding = "CACHE_KV"
-id = "00000000000000000000000000000000" # Dummy ID for local development
-preview_id = "00000000000000000000000000000000" # Dummy ID for local development
+id = "00000000000000000000000000000000"
+preview_id = "00000000000000000000000000000000"
 
-[site]
-bucket = "./src"
+[assets]
+directory = "./src"
+binding = "ASSETS"
+run_worker_first = true
