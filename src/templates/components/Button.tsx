@@ -10,6 +10,8 @@ type ButtonProps = PropsWithChildren<{
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   icon?: JSX.Element;
+  id?: string;
+  disabled?: boolean;
 }>;
 
 const baseClass =
@@ -37,12 +39,14 @@ export const Button: FC<ButtonProps> = ({
   className = '',
   type = 'button',
   icon,
+  id,
+  disabled = false,
   children,
 }) => {
   const content = (
     <span class="flex items-center gap-2">
       {icon && <span class="transition-transform duration-300 group-hover:translate-x-0.5">{icon}</span>}
-      <span>{text || children}</span>
+      <span data-button-label>{text || children}</span>
       <span class={`text-lg font-bold transition-transform duration-300 group-hover:translate-x-1 group-hover:opacity-100 ${arrowClass[variant]}`}>
         →
       </span>
@@ -58,7 +62,7 @@ export const Button: FC<ButtonProps> = ({
   }
 
   return (
-    <button type={type} class={`${baseClass} ${variantClasses[variant]} ${className}`}>
+    <button id={id} type={type} class={`${baseClass} ${variantClasses[variant]} ${className}`} disabled={disabled}>
       {content}
     </button>
   );

@@ -110,7 +110,13 @@ This project is designed for seamless deployment to **Cloudflare Workers**.
     ```bash
     wrangler login
     ```
-3.  **Deploy the Worker:**
+3.  **Configure required secrets:**
+    ```bash
+    wrangler secret put TELEGRAM_BOT_TOKEN
+    wrangler secret put TELEGRAM_CHAT_ID
+    ```
+    These secrets are consumed by the contact form Worker to deliver submissions to the Telegram bot.
+4.  **Deploy the Worker:**
     ```bash
     npm run deploy
     # or

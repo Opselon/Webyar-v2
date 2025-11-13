@@ -1,6 +1,7 @@
 import { jsx } from 'hono/jsx';
 import { Hono } from 'hono';
 import { HTTPException } from 'hono/http-exception';
+import type { D1Database } from '@cloudflare/workers-types';
 import { Language, getLangDetails } from './utils/i18n';
 import { HomePage } from './templates/pages/Home';
 import { ServicesPage } from './templates/pages/Services';
@@ -15,8 +16,22 @@ import staticApp from './static';
 import postsData from './data/posts.json';
 import caseStudiesData from './data/case-studies.json';
 import { languages } from './utils/i18n';
+import {
+  formatContactSubmission,
+  sendTelegramMessage,
+  type ContactSubmission,
+} from './utils/telegram';
 
-const app = new Hono();
+type AppBindings = {
+  TELEGRAM_BOT_TOKEN: string;
+  TELEGRAM_CHAT_ID: string;
+  ASSETS: {
+    fetch: typeof fetch;
+  };
+  SEO_DB: D1Database;
+};
+
+const app = new Hono<{ Bindings: AppBindings }>();
 
 app.route('/', staticApp);
 
@@ -132,6 +147,70 @@ app.get('/:lang/faq', (c) => {
 app.get('/:lang/contact', (c) => {
   const lang = c.req.param('lang') as Language;
   return c.html(<ContactPage lang={lang} />);
+});
+
+app.post('/:lang/contact', async (c) => {
+  const lang = c.req.param('lang') as Language;
+
+  let data: ContactSubmission;
+
+  try {
+    const contentType = c.req.header('content-type') ?? '';
+    let body: Record<string, unknown> = {};
+
+    if (contentType.includes('application/json')) {
+      body = await c.req.json<Record<string, unknown>>();
+    } else {
+      const formBody = await c.req.parseBody();
+      for (const [key, value] of Object.entries(formBody)) {
+        if (typeof value === 'string') {
+          body[key] = value;
+        }
+      }
+    }
+
+    const normalize = (value: unknown) => (typeof value === 'string' ? value.trim() : '');
+    const optional = (value: unknown) => {
+      if (typeof value !== 'string') {
+        return undefined;
+      }
+
+      const trimmed = value.trim();
+      return trimmed.length > 0 ? trimmed : undefined;
+    };
+
+    data = {
+      name: normalize(body?.name),
+      email: normalize(body?.email),
+      website: optional(body?.website),
+      language: optional(body?.language),
+      companySize: optional(body?.companySize),
+      engagement: optional(body?.engagement),
+      message: normalize(body?.message),
+    };
+  } catch {
+    return c.json({ success: false, error: 'invalid_payload' }, 400);
+  }
+
+  if (!data.name || !data.email || !data.message) {
+    return c.json({ success: false, error: 'missing_fields' }, 400);
+  }
+
+  const botToken = c.env.TELEGRAM_BOT_TOKEN;
+  const chatId = c.env.TELEGRAM_CHAT_ID;
+
+  if (!botToken || !chatId) {
+    return c.json({ success: false, error: 'service_unavailable' }, 503);
+  }
+
+  try {
+    const text = formatContactSubmission(data, lang);
+    await sendTelegramMessage({ botToken, chatId }, text);
+    return c.json({ success: true });
+  } catch (error) {
+    console.error('Contact submission failed', error);
+    return c.json({ success: false, error: 'delivery_failed' }, 502);
+  }
 });
 
 export default app;
