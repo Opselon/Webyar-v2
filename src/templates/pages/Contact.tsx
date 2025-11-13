@@ -176,8 +176,8 @@ export const ContactPage: FC<ContactProps> = ({ lang }) => {
                 ? 'برای تطبیق حقوقی، خرید یا امنیت نیاز دارید؟ بسته‌های کامپلاینس، DPA و مستندات SOC II ارائه می‌کنیم.'
                 : 'هل تحتاج إلى إشراك فرق القانون أو المشتريات أو الأمن؟ نوفر حزم الامتثال واتفاقيات حماية البيانات ووثائق SOC II.'}
             </p>
-            <a href="mailto:enterprise@quantumseo.agency" class="font-semibold text-brand-600 transition hover:text-brand-800 dark:text-accent-200 dark:hover:text-white">
-              enterprise@quantumseo.agency
+            <a href="mailto:opcelon@gmail.com" class="font-semibold text-brand-600 transition hover:text-brand-800 dark:text-accent-200 dark:hover:text-white" dir="ltr">
+              opcelon@gmail.com
             </a>
           </div>
         </Card>

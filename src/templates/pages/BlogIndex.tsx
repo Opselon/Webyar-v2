@@ -56,7 +56,9 @@ export const BlogIndexPage: FC<BlogIndexProps> = ({ lang }) => {
   const title = t(lang, 'blogPageTitle');
   const description = t(lang, 'blogPageDescription');
   const canonical = `https://seo.webyar.cloud/${lang}/blog`;
-  const posts = postsData.posts;
+  const posts = [...postsData.posts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
   const isRTL = languages[lang].dir === 'rtl';
   const categories = Array.from(new Set(posts.map((post) => post.category)));
 
@@ -96,7 +98,13 @@ export const BlogIndexPage: FC<BlogIndexProps> = ({ lang }) => {
           {posts.map((post) => {
             const content = post.translations[lang];
             return (
-              <Card key={post.id} variant="glass" className="h-full" data-blog-card data-blog-category={post.category}>
+              <Card
+                key={post.id}
+                variant="glass"
+                className="h-full"
+                data-blog-card="true"
+                data-blog-category={post.category}
+              >
                 <div class="flex h-full flex-col gap-4">
                   <div class="relative overflow-hidden rounded-2xl">
                     <img src={post.coverImage} alt={content.title} class="h-40 w-full object-cover" loading="lazy" />
