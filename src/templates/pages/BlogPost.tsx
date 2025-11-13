@@ -21,7 +21,10 @@ export const BlogPostPage: FC<BlogPostProps> = ({ lang, slug }) => {
 
   const content = post.translations[lang];
   const isRTL = languages[lang].dir === 'rtl';
-  const related = postsData.posts.filter((p) => p.slug !== slug).slice(0, 2);
+  const related = [...postsData.posts]
+    .filter((p) => p.slug !== slug)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 2);
 
   return (
     <Layout
@@ -51,8 +54,12 @@ export const BlogPostPage: FC<BlogPostProps> = ({ lang, slug }) => {
         </div>
 
         <div class="grid gap-10 lg:grid-cols-[2.2fr_1fr]">
-          <Card variant="glass" interactive={false} className="prose prose-slate max-w-none leading-relaxed dark:prose-invert">
-            <div class="prose-headings:font-display prose-headings:text-gray-900 dark:prose-headings:text-white" dangerouslySetInnerHTML={{ __html: content.content }} />
+          <Card
+            variant="glass"
+            interactive={false}
+            contentClassName="prose prose-slate max-w-none leading-relaxed dark:prose-invert prose-headings:font-display prose-headings:text-gray-900 dark:prose-headings:text-white"
+          >
+            <div dangerouslySetInnerHTML={{ __html: content.content }} />
           </Card>
           <aside class="space-y-6">
             <Card variant="glass" interactive={false} className="space-y-4">
